@@ -4,31 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Bonjour, je suis <span>Ton Nom</span></h1>
-    <p>Développeur Web / Portfolio</p>
-    <nav>
-      <a href="#projects">Projets</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#accueil" class="logo">MonNom</a>
+    <ul class="nav-links">
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#a-propos">À propos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="accueil" class="hero-section">
+    <div class="hero-text">
+      <h1>Hello, je suis <span>Développeur Web</span></h1>
+      <p>Créateur de sites modernes & responsive</p>
+      <a href="#projets" class="btn">Voir mes projets</a>
+    </div>
   </header>
 
   <!-- Projets -->
-  <section id="projects">
-    <h2>Mes Projets</h2>
-    <div class="projects-grid"></div>
+  <section id="projets" class="projects-section">
+    <h2>Mes projets</h2>
+    <div class="cards-container">
+      <div class="project-card">
+        <img src="assets/images/ton-image.jpg" alt="Projet 1">
+        <h3>Projet 1</h3>
+        <p>Description courte du projet</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/images/ton-image.jpg" alt="Projet 2">
+        <h3>Projet 2</h3>
+        <p>Description courte du projet</p>
+      </div>
+      <!-- Ajoute d'autres cartes si nécessaire -->
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="a-propos" class="about-section">
+    <h2>À propos de moi</h2>
+    <p>Je suis passionné par le développement front-end et j’aime créer des expériences web intuitives.</p>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 email@exemple.com</p>
-    <p>🐙 <a href="https://github.com/tonPseudo">Mon GitHub</a></p>
-  </section>
+  <footer id="contact" class="footer">
+    <h3>Contact</h3>
+    <p>✉️ monemail@example.com</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
