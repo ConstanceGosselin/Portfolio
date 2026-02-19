@@ -14,18 +14,26 @@ body {
 
 /* Header */
 header {
-  background: white;
-  color: #2980b9; /* bleu ciel */
-  padding: 20px 0;
+  position: relative;
+  text-align: center;
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 header nav {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1000px;
-  margin: auto;
-  padding: 0 20px;
+  width: 90%;
 }
 
 nav ul {
@@ -45,22 +53,10 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
-  position: relative;
   text-align: center;
+  padding: 100px 20px;
+  background: white;
   color: #2980b9; /* titre bleu ciel */
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-
-  /* Image de fond avec overlay */
-  background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
-                    url('photo_maison.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #hero h2 {
@@ -75,13 +71,11 @@ nav ul li a {
   color: #555555; /* texte gris foncé */
 }
 
-@media (max-width: 768px) {
-  #hero h2 {
-    font-size: 2rem;
-  }
-  #hero p {
-    font-size: 1rem;
-  }
+/* Image sous Hero */
+#hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Sections */
@@ -149,3 +143,26 @@ footer {
   padding: 20px 0;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+}
