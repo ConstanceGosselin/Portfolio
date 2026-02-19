@@ -1,151 +1,41 @@
-/* Reset et font */
-* {
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  font-family: 'Arimo', sans-serif;
-  background: white;
-  color: #555555; /* texte gris foncé */
-  line-height: 1.6;
-}
-
-/* Header */
 header {
-  background: white;
-  color: #2980b9; /* bleu ciel */
-  padding: 20px 0;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: #2980b9; /* liens bleu ciel */
-  text-decoration: none;
-  font-weight: 700;
-}
-
-/* Hero Section */
-#hero {
-  position: relative;
+  background: #0a0a23;
+  color: white;
   text-align: center;
-  color: #2980b9; /* titre bleu ciel */
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-
-  /* Image de fond avec overlay */
-  background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
-                    url('images/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 40px 20px;
 }
 
-#hero h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+header h1 span {
+  color: #4fc08d;
 }
 
-#hero p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #555555; /* texte gris foncé */
+nav a {
+  margin: 0 10px;
+  color: #ddd;
+  text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  #hero h2 {
-    font-size: 2rem;
-  }
-  #hero p {
-    font-size: 1rem;
-  }
-}
-
-/* Sections */
 section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-  background: white;
+  padding: 40px 20px;
 }
 
-h2, h3 {
-  font-weight: 700;
-  color: #2980b9; /* titres bleu ciel */
-  margin-bottom: 20px;
-}
-
-/* Projects */
-.projects-container {
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 .project-card {
   background: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
-
-/* Contact */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-input, textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: 'Arimo', sans-serif;
-  color: #555555; /* texte gris foncé */
-}
-
-button {
-  padding: 10px;
-  background: #2980b9; /* bleu ciel */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-button:hover {
-  background: #1f609e; /* bleu plus foncé au hover */
-}
-
-/* Footer */
-footer {
-  background: white;
-  color: #2980b9; /* texte bleu ciel */
-  text-align: center;
-  padding: 20px 0;
-}
-
