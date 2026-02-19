@@ -7,15 +7,15 @@
 
 body {
   font-family: 'Arimo', sans-serif; /* <- ici la police fonctionne */
-  background: #f9f9f9;
-  color: #666666;
+  background: #666666;
+  color: #0D8FFF;
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: #154360;
-  color: #2E2E2E;
+  background: #2980b9;
+  color: #154360;
   padding: 20px 0;
 }
 
