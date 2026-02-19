@@ -7,15 +7,15 @@
 
 body {
   font-family: 'Arimo', sans-serif;
-  background: white;          /* fond blanc pour tout le site */
-  color: #555555;             /* texte gris foncé */
+  background: white;
+  color: #555555; /* texte gris foncé */
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: white;          /* fond blanc pour le header */
-  color: #2980b9;             /* texte bleu ciel dans le header */
+  background: white;
+  color: #2980b9; /* bleu ciel */
   padding: 20px 0;
 }
 
@@ -38,28 +38,50 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #2980b9;             /* liens bleu ciel */
+  color: #2980b9; /* liens bleu ciel */
   text-decoration: none;
   font-weight: 700;
 }
 
 /* Hero Section */
 #hero {
+  position: relative;
   text-align: center;
-  padding: 100px 20px;
-  background: white;           /* fond blanc */
-  color: #2980b9;              /* titres et textes bleu ciel */
+  color: #2980b9; /* titre bleu ciel */
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+
+  /* Image de fond avec overlay */
+  background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
+                    url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-h2, h3 {
+#hero h2 {
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #2980b9;             /* titres bleu ciel */
   margin-bottom: 20px;
 }
 
-p {
+#hero p {
+  font-size: 1.2rem;
   font-weight: 400;
-  color: #555555;             /* texte gris foncé */
+  color: #555555; /* texte gris foncé */
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
 }
 
 /* Sections */
@@ -67,7 +89,13 @@ section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
-  background: white;           /* fond blanc pour toutes les sections */
+  background: white;
+}
+
+h2, h3 {
+  font-weight: 700;
+  color: #2980b9; /* titres bleu ciel */
+  margin-bottom: 20px;
 }
 
 /* Projects */
@@ -96,12 +124,12 @@ input, textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: 'Arimo', sans-serif;
-  color: #555555;             /* texte gris foncé dans les champs */
+  color: #555555; /* texte gris foncé */
 }
 
 button {
   padding: 10px;
-  background: #2980b9;        /* bleu ciel pour le bouton */
+  background: #2980b9; /* bleu ciel */
   color: white;
   border: none;
   border-radius: 5px;
@@ -109,10 +137,15 @@ button {
   font-weight: 700;
 }
 
+button:hover {
+  background: #1f609e; /* bleu plus foncé au hover */
+}
+
 /* Footer */
 footer {
-  background: white;           /* fond blanc */
-  color: #2980b9;              /* texte bleu ciel */
+  background: white;
+  color: #2980b9; /* texte bleu ciel */
   text-align: center;
   padding: 20px 0;
 }
+
