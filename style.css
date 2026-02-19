@@ -87,7 +87,7 @@ body {
 
 .project-card {
   background: white;
-  width: 260px;
+  width: 240px; /* 👈 plus compact */
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 10px;
@@ -95,8 +95,11 @@ body {
 
 .project-card img {
   width: 100%;
+  height: 150px;      /* 👈 taille fixe */
+  object-fit: cover; /* 👈 recadre sans déformer */
   border-radius: 5px;
 }
+
 
 /* À propos */
 .about-section {
