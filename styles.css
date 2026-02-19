@@ -1,90 +1,84 @@
-/* Base */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
+/* Reset rapide */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Hero Full Screen */
-.hero.full-screen {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  background: #ffffff;
-  color: #1a1a1a;
-  padding: 0 1rem;
+body {
+    background-color: #fff;
+    color: #111;
 }
 
-/* Eyebrow */
-.hero-eyebrow {
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  letter-spacing: 0.1em;
-  color: #666;
-  margin-bottom: 1rem;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
 }
 
-/* Title */
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0.5rem 0 1rem;
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
 .highlight {
-  color: #2563eb;
+    color: #3366ff; /* bleu */
 }
 
-/* Paragraph */
-.hero p {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  color: #666;
-  font-size: 1.125rem;
-  line-height: 1.5;
+.hero-text p {
+    margin: 20px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  transition: 0.3s;
-  margin: 0 0.5rem;
+.buttons button {
+    padding: 10px 25px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
 }
 
-.btn-primary {
-  background: #1a1a1a;
-  color: white;
+.btn-black {
+    background-color: #111;
+    color: #fff;
 }
 
-.btn-primary:hover {
-  background: #333;
+.btn-white {
+    background-color: #fff;
+    color: #111;
+    border: 1px solid #111;
 }
 
-.btn-outline {
-  background: transparent;
-  border: 1px solid #1a1a1a;
-  color: #1a1a1a;
+.hero-image img {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.btn-outline:hover {
-  background: #f8f9fa;
-}
-
-/* Optional: simple snowfall effect */
-#snowfall {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
