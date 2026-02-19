@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Okeke LLC</title>
+    <meta name="description" content="Get in touch with Okeke LLC. Let's talk about your project, technical challenges, or how we can help your business grow.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us | Okeke LLC">
+    <meta property="og:description" content="Let's talk about your project and how we can help.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://okeke.us/contact/">
+    <meta property="og:image" content="https://okeke.us/images/partnership-handshake.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:alt" content="Business partnership - Contact Okeke LLC">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us | Okeke LLC">
+    <meta name="twitter:description" content="Let's talk about your project and how we can help.">
+    <meta name="twitter:image" content="https://okeke.us/images/partnership-handshake.jpg">
+
+    <link rel="canonical" href="https://okeke.us/contact/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- Snowfall Canvas -->
+    <canvas id="snowfall" aria-hidden="true"></canvas>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/images/logo.png" alt="Okeke LLC" width="50" height="50">
+                Okeke LLC
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/services/">Services</a>
+                <a href="/research/">Research</a>
+                <a href="/apps/">Apps</a>
+                <a href="/about/">About</a>
+                <a href="/contact/" class="nav-cta active">Get in Touch</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <header class="page-hero">
+            <div class="container">
+                <a href="/" class="back-link">← Home</a>
+                <h1>Let's Talk</h1>
+                <p class="page-subtitle">Have a project in mind? Need help with technical challenges? Just want to connect? We'd love to hear from you.</p>
+            </div>
+        </header>
+
+        <section class="section contact-main">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you within 24-48 hours.</p>
+
+                        <form class="contact-form" action="https://formspree.io/f/mpqrgdkj" method="POST">
+                            <!-- Honeypot field - hidden from users, catches bots -->
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name <span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" required placeholder="John Smith">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company <span class="optional">(optional)</span></label>
+                                <input type="text" id="company" name="company" placeholder="Your company name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reason">How can we help? <span class="required">*</span></label>
+                                <select id="reason" name="reason" required>
+                                    <option value="">Select a reason...</option>
+                                    <optgroup label="Development">
+                                        <option value="iOS/macOS App Development">iOS/macOS App Development</option>
+                                        <option value="Web Application">Web Application</option>
+                                        <option value="MVP/Prototype">MVP or Prototype</option>
+                                    </optgroup>
+                                    <optgroup label="Consulting">
+                                        <option value="Technical Consulting">Technical Consulting</option>
+                                        <option value="Architecture Review">Architecture Review</option>
+                                        <option value="Cloud & Infrastructure">Cloud & Infrastructure</option>
+                                    </optgroup>
+                                    <optgroup label="Growth">
+                                        <option value="App Store Optimization">App Store Optimization</option>
+                                        <option value="Marketing Strategy">Marketing Strategy</option>
+                                    </optgroup>
+                                    <optgroup label="Other">
+                                        <option value="Partnership">Partnership Opportunity</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Tell us about your project <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required placeholder="What are you looking to build? What challenges are you facing? Any timeline considerations?"></textarea>
+                            </div>
+
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                                <p class="form-note">We typically respond within 24-48 hours.</p>
+                            </div>
+                        </form>
+
+                        <div class="contact-alt">
+                            <p>Or reach us directly:</p>
+                            <div class="contact-methods">
+                                <a href="mailto:contact@okeke.us" class="contact-link">contact@okeke.us</a>
+                                <a href="https://www.linkedin.com/company/okeke-llc/" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-topics">
+                        <h2>What Can We Help With?</h2>
+                        <div class="topics-list">
+                            <div class="topic">
+                                <span class="topic-icon">💻</span>
+                                <div>
+                                    <h4>Custom Development</h4>
+                                    <p>iOS apps, web applications, or full-stack solutions built to your specifications.</p>
+                                </div>
+                            </div>
+                            <div class="topic">
+                                <span class="topic-icon">🏗️</span>
+                                <div>
+                                    <h4>Technical Consulting</h4>
+                                    <p>Architecture reviews, technology decisions, and strategic technical guidance.</p>
+                                </div>
+                            </div>
+                            <div class="topic">
+                                <span class="topic-icon">☁️</span>
+                                <div>
+                                    <h4>Cloud & Infrastructure</h4>
+                                    <p>Azure, AWS, serverless architecture, and DevOps implementation.</p>
+                                </div>
+                            </div>
+                            <div class="topic">
+                                <span class="topic-icon">📈</span>
+                                <div>
+                                    <h4>Growth Strategy</h4>
+                                    <p>App Store optimization, marketing strategy, and user acquisition.</p>
+                                </div>
+                            </div>
+                            <div class="topic">
+                                <span class="topic-icon">🤝</span>
+                                <div>
+                                    <h4>Partnership Opportunities</h4>
+                                    <p>Interested in collaborating? Let's explore how we can work together.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Okeke LLC</span>
+                    <p>Building software. Helping businesses grow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/services/">Services</a>
+                    <a href="/research/">Research</a>
+                    <a href="/apps/">Apps</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="https://sundai.us" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Okeke LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Snowfall Animation
+        const canvas = document.getElementById('snowfall');
+        const ctx = canvas.getContext('2d');
+        let snowflakes = [];
+        const maxSnowflakes = 100;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height - canvas.height,
+                radius: Math.random() * 3 + 1,
+                speed: Math.random() * 1 + 0.5,
+                wind: Math.random() * 0.5 - 0.25,
+                opacity: Math.random() * 0.2 + 0.15
+            };
+        }
+
+        function initSnowflakes() {
+            snowflakes = [];
+            for (let i = 0; i < maxSnowflakes; i++) {
+                const flake = createSnowflake();
+                flake.y = Math.random() * canvas.height;
+                snowflakes.push(flake);
+            }
+        }
+
+        function drawSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            snowflakes.forEach((flake, index) => {
+                ctx.beginPath();
+                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(173, 216, 230, ${flake.opacity})`;
+                ctx.fill();
+                flake.y += flake.speed;
+                flake.x += flake.wind;
+                if (flake.y > canvas.height) snowflakes[index] = createSnowflake();
+                if (flake.x > canvas.width) flake.x = 0;
+                else if (flake.x < 0) flake.x = canvas.width;
+            });
+            requestAnimationFrame(drawSnowflakes);
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReducedMotion) {
+            resizeCanvas();
+            initSnowflakes();
+            drawSnowflakes();
+            window.addEventListener('resize', () => { resizeCanvas(); initSnowflakes(); });
+        }
+    </script>
+</body>
+</html>

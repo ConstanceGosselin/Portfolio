@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okeke LLC | Software Development, Consulting & Cloud Solutions</title>
+    <meta name="description" content="Okeke LLC builds innovative software and helps businesses grow. Mobile apps, cloud architecture, AI integration, and strategic consulting.">
+    <meta name="keywords" content="software development, iOS apps, mobile development, cloud architecture, consulting, Swift, Python, AI, machine learning">
+    <meta name="author" content="Okeke LLC">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Okeke LLC | Software Development & Consulting">
+    <meta property="og:description" content="We build software and help businesses grow. Apps, cloud architecture, AI, and strategic consulting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://okeke.us">
+    <meta property="og:site_name" content="Okeke LLC">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Okeke LLC | Software Development & Consulting">
+    <meta name="twitter:description" content="We build software and help businesses grow. Apps, cloud architecture, AI, and strategic consulting.">
+    <meta name="twitter:image" content="https://okeke.us/images/hero-workspace.jpg">
+    <meta property="og:image" content="https://okeke.us/images/hero-workspace.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1257">
+    <meta property="og:image:alt" content="Modern workspace with laptop - Okeke LLC Software Development">
+
+    <link rel="canonical" href="https://okeke.us">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Okeke LLC",
+        "url": "https://okeke.us",
+        "logo": "https://okeke.us/images/logo-full.png",
+        "description": "Software development and consulting company specializing in iOS apps, cloud architecture, AI integration, and growth strategy. We build software and help businesses scale.",
+        "foundingDate": "2024",
+        "email": "contact@okeke.us",
+        "sameAs": [
+            "https://www.linkedin.com/company/okeke-llc/"
+        ],
+        "areaServed": {
+            "@type": "Place",
+            "name": "Worldwide"
+        },
+        "serviceType": [
+            "Software Development",
+            "iOS App Development",
+            "Cloud Architecture",
+            "Technical Consulting",
+            "AI Integration",
+            "Growth Strategy"
+        ],
+        "knowsAbout": [
+            "iOS Development",
+            "Swift",
+            "SwiftUI",
+            "Python",
+            "Cloud Architecture",
+            "Azure",
+            "AWS",
+            "AI/ML",
+            "Mobile Apps",
+            "App Store Optimization"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Technical Consulting",
+                        "description": "Architecture review, technology selection, and technical due diligence"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Product Development",
+                        "description": "iOS, macOS, and web application development from concept to launch"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Cloud & Infrastructure",
+                        "description": "Cloud architecture design, serverless implementation, and DevOps"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Growth Strategy",
+                        "description": "App Store optimization, marketing strategy, and analytics implementation"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Structured Data - WebSite (for sitelinks search) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Okeke LLC",
+        "url": "https://okeke.us",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://okeke.us/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Snowfall Canvas -->
+    <canvas id="snowfall" aria-hidden="true"></canvas>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo" aria-label="Okeke LLC Home">
+                <img src="/images/logo.png" alt="Okeke LLC" width="50" height="50">
+                Okeke LLC
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/services/">Services</a>
+                <a href="/research/">Research</a>
+                <a href="/apps/">Apps</a>
+                <a href="/about/">About</a>
+                <a href="/contact/" class="nav-cta">Get in Touch</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <p class="hero-eyebrow">Software Development & Consulting</p>
+                <h1>We build software.<br>We help you <span class="highlight">grow</span>.</h1>
+                <p class="hero-subtitle">From mobile apps to cloud architecture, we create technology that works — and help businesses scale with strategy, not just code.</p>
+                <div class="hero-cta">
+                    <a href="/services/" class="btn btn-primary">How We Help</a>
+                    <a href="/apps/" class="btn btn-secondary">See Our Work</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/images/hero-workspace.jpg" alt="Modern workspace setup with laptop for software development" width="1920" height="1257" loading="eager">
+            </div>
+        </div>
+    </header>
+
+    <!-- What We Do - Quick Overview -->
+    <section class="section overview-section" aria-labelledby="overview-heading">
+        <div class="container">
+            <h2 id="overview-heading" class="visually-hidden">What We Do</h2>
+            <div class="overview-grid">
+                <a href="/services/" class="overview-card">
+                    <div class="overview-icon" aria-hidden="true">🛠️</div>
+                    <h3>Services</h3>
+                    <p>Consulting, development, cloud architecture, and growth strategy for businesses ready to scale.</p>
+                    <span class="overview-link">Explore Services →</span>
+                </a>
+                <a href="/research/" class="overview-card">
+                    <div class="overview-icon" aria-hidden="true">🔬</div>
+                    <h3>Research</h3>
+                    <p>AI/ML, cloud-native systems, and emerging technologies we're actively exploring and building with.</p>
+                    <span class="overview-link">See What We're Learning →</span>
+                </a>
+                <a href="/apps/" class="overview-card">
+                    <div class="overview-icon" aria-hidden="true">📱</div>
+                    <h3>Apps</h3>
+                    <p>Our portfolio of published applications — proof that we build real products people use.</p>
+                    <span class="overview-link">View Our Apps →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="section services-preview" aria-labelledby="services-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="services-heading">How We Help</h2>
+                <a href="/services/" class="section-link">All Services →</a>
+            </div>
+            <p class="section-subtitle">Whether you need to build, grow, or scale — we've done it ourselves and can help you do it too.</p>
+
+            <div class="services-grid-preview">
+                <div class="service-preview-card">
+                    <h3>Technical Consulting</h3>
+                    <p>Architecture reviews, technology decisions, and technical strategy. We help you make the right choices before writing a line of code.</p>
+                </div>
+                <div class="service-preview-card">
+                    <h3>Product Development</h3>
+                    <p>Full-stack mobile and web applications. From MVP to scale, we build products that users love and businesses depend on.</p>
+                </div>
+                <div class="service-preview-card">
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>Azure, AWS, serverless, containers. We design and implement cloud architecture that's secure, scalable, and cost-effective.</p>
+                </div>
+                <div class="service-preview-card">
+                    <h3>Growth Strategy</h3>
+                    <p>Marketing, user acquisition, and scaling operations. We've grown our own products and can help you grow yours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Preview -->
+    <section class="section research-preview" aria-labelledby="research-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="research-heading">What We're Exploring</h2>
+                <a href="/research/" class="section-link">All Research →</a>
+            </div>
+            <p class="section-subtitle">Technology moves fast. We stay current by building, experimenting, and learning continuously.</p>
+
+            <div class="research-tags" role="list" aria-label="Technologies we're researching">
+                <span class="research-tag" role="listitem">AI & Machine Learning</span>
+                <span class="research-tag" role="listitem">Large Language Models</span>
+                <span class="research-tag" role="listitem">Cloud-Native Architecture</span>
+                <span class="research-tag" role="listitem">Swift & SwiftUI</span>
+                <span class="research-tag" role="listitem">Serverless Computing</span>
+                <span class="research-tag" role="listitem">Edge Computing</span>
+                <span class="research-tag" role="listitem">MLOps</span>
+                <span class="research-tag" role="listitem">DevOps & CI/CD</span>
+            </div>
+
+            <p class="research-note">We don't just read about these technologies — we build with them. Our apps are our lab.</p>
+        </div>
+    </section>
+
+    <!-- Apps Preview -->
+    <section class="section apps-section" aria-labelledby="apps-heading">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="apps-heading">Our Apps</h2>
+                <a href="/apps/" class="section-link">View All →</a>
+            </div>
+            <p class="section-subtitle">Real products, real users, real revenue. Built with Swift, Python, and modern cloud technologies.</p>
+
+            <div class="apps-grid">
+                <!-- MedRec - Business App -->
+                <article class="app-card featured business">
+                    <div class="app-icon" role="img" aria-label="MedRec - Clinical document review platform">
+                        <div class="app-icon-placeholder healthcare">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="36" height="36">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="app-content">
+                        <div class="app-platforms">
+                            <span class="platform business">Enterprise</span>
+                            <span class="platform">Web</span>
+                        </div>
+                        <h3>MedRec</h3>
+                        <p>HIPAA-compliant clinical document review platform with AI-powered data extraction for healthcare providers.</p>
+                        <div class="app-links">
+                            <a href="/contact/" class="btn btn-small">Request Demo</a>
+                            <a href="/apps/#business" class="link-arrow">Learn more →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie Maker -->
+                <article class="app-card featured">
+                    <div class="app-icon" role="img" aria-label="Movie Maker app icon - Video editing application">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9e/07/b6/9e07b628-82b7-41d9-54f1-a18813877a32/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt="Movie Maker" width="72" height="72" loading="lazy">
+                    </div>
+                    <div class="app-content">
+                        <div class="app-platforms">
+                            <span class="platform">iOS</span>
+                            <span class="platform">iPad</span>
+                        </div>
+                        <h3>Movie Maker – Video Editor</h3>
+                        <p>Create stunning videos with an intuitive editor. Professional results, simple workflow for creators.</p>
+                        <div class="app-links">
+                            <a href="https://apps.apple.com/us/app/movie-maker-video-editor/id6755254508" class="btn btn-small" target="_blank" rel="noopener noreferrer" aria-label="Download Movie Maker on the App Store">App Store</a>
+                            <a href="/apps/moviemaker/" class="link-arrow">Learn more →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ScanPrice -->
+                <article class="app-card featured">
+                    <div class="app-icon" role="img" aria-label="ScanPrice app icon - Currency conversion application">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/22/ec/0a/22ec0a01-c46e-54fb-6568-5248c1502d70/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt="ScanPrice" width="72" height="72" loading="lazy">
+                    </div>
+                    <div class="app-content">
+                        <div class="app-platforms">
+                            <span class="platform">iOS</span>
+                        </div>
+                        <h3>ScanPrice: Currency Converter</h3>
+                        <p>Real-time currency conversion for travelers and international shoppers. 160+ currencies supported.</p>
+                        <div class="app-links">
+                            <a href="https://apps.apple.com/us/app/scanprice-currency-converter/id6755891772" class="btn btn-small" target="_blank" rel="noopener noreferrer" aria-label="Download ScanPrice on the App Store">App Store</a>
+                            <a href="/apps/scanprice/" class="link-arrow">Learn more →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="apps-more">
+                <a href="/apps/" class="btn btn-outline">See All 8 Apps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="section about-section" aria-labelledby="about-heading">
+        <div class="container">
+            <div class="about-content">
+                <h2 id="about-heading">About Okeke LLC</h2>
+                <p>We're a software development company that builds products and helps others build theirs. Our portfolio spans business tools, educational apps, and creative utilities — each one a learning experience that makes us better at what we do.</p>
+                <p>We believe in <em>learning by building</em>. Every technology we recommend to clients, we've used ourselves. Every strategy we suggest, we've tested on our own products.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Apps Published</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Crashes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Stability</span>
+                    </div>
+                </div>
+                <a href="/about/" class="btn btn-secondary" style="margin-top: var(--spacing-lg);">Learn More About Us →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section contact-section" aria-labelledby="contact-heading">
+        <div class="container">
+            <h2 id="contact-heading">Let's Talk</h2>
+            <p class="section-subtitle">Have a project in mind? Need help scaling? Just want to connect? We'd love to hear from you.</p>
+            <div class="contact-links">
+                <a href="mailto:contact@okeke.us" class="btn btn-primary btn-large" aria-label="Email us at contact@okeke.us">contact@okeke.us</a>
+                <a href="https://www.linkedin.com/company/okeke-llc/" class="btn btn-outline btn-large" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn page">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Okeke LLC</span>
+                    <p>Building software. Helping businesses grow.</p>
+                </div>
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <a href="/services/">Services</a>
+                    <a href="/research/">Research</a>
+                    <a href="/apps/">Apps</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="https://sundai.us" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Okeke LLC. All rights reserved.</p>
+                <nav class="footer-legal" aria-label="Legal links">
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Snowfall Animation
+        const canvas = document.getElementById('snowfall');
+        const ctx = canvas.getContext('2d');
+
+        let snowflakes = [];
+        const maxSnowflakes = 100;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height - canvas.height,
+                radius: Math.random() * 3 + 1,
+                speed: Math.random() * 1 + 0.5,
+                wind: Math.random() * 0.5 - 0.25,
+                opacity: Math.random() * 0.2 + 0.15
+            };
+        }
+
+        function initSnowflakes() {
+            snowflakes = [];
+            for (let i = 0; i < maxSnowflakes; i++) {
+                const flake = createSnowflake();
+                flake.y = Math.random() * canvas.height;
+                snowflakes.push(flake);
+            }
+        }
+
+        function drawSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            snowflakes.forEach((flake, index) => {
+                ctx.beginPath();
+                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(173, 216, 230, ${flake.opacity})`; // Light blue
+                ctx.fill();
+
+                // Update position
+                flake.y += flake.speed;
+                flake.x += flake.wind;
+
+                // Reset if off screen
+                if (flake.y > canvas.height) {
+                    snowflakes[index] = createSnowflake();
+                }
+                if (flake.x > canvas.width) {
+                    flake.x = 0;
+                } else if (flake.x < 0) {
+                    flake.x = canvas.width;
+                }
+            });
+
+            requestAnimationFrame(drawSnowflakes);
+        }
+
+        // Check for reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReducedMotion) {
+            resizeCanvas();
+            initSnowflakes();
+            drawSnowflakes();
+            window.addEventListener('resize', () => {
+                resizeCanvas();
+                initSnowflakes();
+            });
+        }
+    </script>
+</body>
+</html>
