@@ -1,0 +1,115 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #000;
+}
+
+/* Hero */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero-section h1 span {
+  color: #ffd700;
+}
+
+.btn {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 25px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Projets */
+.projects-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: white;
+  width: 260px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* À propos */
+.about-section {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  padding: 40px 20px;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
