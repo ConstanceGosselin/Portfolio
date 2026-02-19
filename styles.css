@@ -1,38 +1,90 @@
-:root {
-  --color-text: #1a1a1a;
-  --color-bg: #ffffff;
-  --color-primary: #2563eb;
-  --font-main: 'Arial', sans-serif;
-  --spacing-md: 1rem;
-}
-
-body {
-  font-family: var(--font-main);
+/* Base */
+body, html {
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
 }
 
-h1 {
-  color: var(--color-primary);
+/* Hero Full Screen */
+.hero.full-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 50px;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 0 1rem;
 }
 
-p {
+/* Eyebrow */
+.hero-eyebrow {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Title */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+
+.highlight {
+  color: #2563eb;
+}
+
+/* Paragraph */
+.hero p {
   max-width: 600px;
-  margin: 20px auto;
-  text-align: center;
-  font-size: 18px;
+  margin: 0 auto 2rem;
+  color: #666;
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
-a {
-  color: var(--color-primary);
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
+  transition: 0.3s;
+  margin: 0 0.5rem;
 }
 
-a:hover {
-  text-decoration: underline;
+.btn-primary {
+  background: #1a1a1a;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #333;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #1a1a1a;
+  color: #1a1a1a;
+}
+
+.btn-outline:hover {
+  background: #f8f9fa;
+}
+
+/* Optional: simple snowfall effect */
+#snowfall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
