@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Mon Portefolio </title>
+  <title>Mon Portfolio</title>
 
   <!-- Google Fonts Arimo -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,33 +11,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Header avec image -->
   <header>
+    <img src="images/header.jpg" alt="Image Header" class="header-img">
     <nav>
-      <h1> Constance Gosselin</h1>
+      <h1>Mon Portfolio</h1>
       <ul>
         <li><a href="#about">À propos</a></li>
         <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Hero Section (texte seul) -->
   <section id="hero">
-    <h2> Géographe spécialisé dans le dérègment climatique</h2>
-    <p> Entre la climatologie, la gestion des risques naturels et l'SIG, il y a qu'un pas, mon profil.</p>
+    <h2>Bonjour, je suis [Ton Nom]</h2>
+    <p>Développeur web passionné et chercheuse en climatologie.</p>
   </section>
 
+  <!-- Image pleine largeur sous le hero -->
+  <section id="hero-image">
+    <img src="images/hero-bottom.jpg" alt="Image après Hero">
+  </section>
+
+  <!-- À propos -->
   <section id="about">
     <h2>À propos de moi</h2>
     <p>
-    Je suis passionnée par la géographie et le changement climatique. 
-    Diplômée d'un Master en Global Change à l'Université de Liège, j'ai participé à plusieurs projets de recherche sur le climat, la météorologie et la gestion des risques. 
-    J'aime transformer les données complexes en informations claires et utiles pour le public et les décideurs.
-    Je suis aussi active dans les causes associatives qui permettent de mieux comprendre comment limiter notre impact sur les ressources terrestres.
-    <p>
+      Je suis diplômée d'un Master en Géographie, Global Change, à l'Université de Liège. 
+      Après plusieurs projets de recherche sur le climat, la météorologie et la gestion des risques, 
+      je m'intéresse désormais à l'analyse des données environnementales et à la communication scientifique.
+    </p>
+  </section>
 
+  <!-- Projets -->
   <section id="projects">
     <h2>Projets</h2>
     <div class="projects-container">
@@ -52,6 +64,18 @@
     </div>
   </section>
 
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>© 2026 Mon Portfolio</p>
   </footer>
@@ -59,3 +83,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
