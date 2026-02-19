@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Portfolio</title>
 
-  <!-- Google Font Arimo -->
+  <!-- Google Fonts Arimo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Ton CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-  <!-- Header -->
   <header>
     <nav>
       <h1>Mon Portfolio</h1>
@@ -25,40 +25,44 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section id="hero">
     <h2>Bonjour, je suis [Ton Nom]</h2>
-    <p>Développeur web passionné, créatif et curieux.</p>
+    <p>Développeur web passionné.</p>
   </section>
 
-  <!-- À propos -->
   <section id="about">
     <h2>À propos de moi</h2>
-    <p>Bienvenue sur mon portfolio ! Ici, vous pouvez découvrir mes projets et compétences.</p>
+    <p>Bienvenue sur mon portfolio !</p>
   </section>
 
-  <!-- Projets -->
   <section id="projects">
     <h2>Projets</h2>
     <div class="projects-container">
       <div class="project-card">
-        <img src="assets/images/projet1.png" alt="Projet 1">
         <h3>Projet 1</h3>
         <p>Description courte du projet.</p>
       </div>
       <div class="project-card">
-        <img src="assets/images/projet2.png" alt="Projet 2">
         <h3>Projet 2</h3>
         <p>Description courte du projet.</p>
       </div>
-      <!-- Ajoute d’autres projets ici -->
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
     <form>
       <input type="text" placeholder="Nom" required>
       <input type="email" placeholder="Email" required>
-      <textarea plac
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 Mon Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
