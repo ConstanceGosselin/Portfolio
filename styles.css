@@ -8,7 +8,7 @@
 body {
   font-family: 'Arimo', sans-serif;
   background: white;          /* fond blanc pour tout le site */
-  color: #aaaaaa;             /* texte gris clair */
+  color: #555555;             /* texte gris foncé */
   line-height: 1.6;
 }
 
@@ -59,7 +59,7 @@ h2, h3 {
 
 p {
   font-weight: 400;
-  color: #aaaaaa;             /* texte gris clair */
+  color: #555555;             /* texte gris foncé */
 }
 
 /* Sections */
@@ -96,7 +96,7 @@ input, textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: 'Arimo', sans-serif;
-  color: #333;                /* texte gris foncé dans les champs */
+  color: #555555;             /* texte gris foncé dans les champs */
 }
 
 button {
@@ -116,4 +116,3 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
-
