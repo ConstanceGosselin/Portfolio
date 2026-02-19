@@ -10,6 +10,7 @@ body {
   background: #f5f5f5;
   color: #333;
   line-height: 1.6;
+  font-family: 'Arimo', sans-serif;
 }
 
 header {
@@ -60,4 +61,13 @@ footer {
   padding: 20px 0;
 }
 
+h1, h2, h3 {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700; /* Titres en gras */
+}
+
+p, li, a {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400; /* Texte normal */
+}
 
