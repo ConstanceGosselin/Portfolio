@@ -57,7 +57,7 @@ nav ul li a {
 
   /* Image de fond avec overlay */
   background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
-                    url('images/hero.jpg');
+                    url('photo_maison.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
