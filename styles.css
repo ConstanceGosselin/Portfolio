@@ -6,16 +6,16 @@
 }
 
 body {
-  font-family: 'Arimo', sans-serif; /* <- ici la police fonctionne */
-  background: white;
-  color: #0D8FFF;
+  font-family: 'Arimo', sans-serif;
+  background: white;          /* fond blanc pour tout le site */
+  color: #aaaaaa;             /* texte gris clair */
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: #2980b9;
-  color: white;
+  background: white;          /* fond blanc pour le header */
+  color: #2980b9;             /* texte bleu ciel dans le header */
   padding: 20px 0;
 }
 
@@ -38,7 +38,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #2980b9;             /* liens bleu ciel */
   text-decoration: none;
   font-weight: 700;
 }
@@ -47,17 +47,19 @@ nav ul li a {
 #hero {
   text-align: center;
   padding: 100px 20px;
-  background: #666666;
-  color: #2980b9 ;
+  background: white;           /* fond blanc */
+  color: #2980b9;              /* titres et textes bleu ciel */
 }
 
-h2 {
+h2, h3 {
   font-weight: 700;
+  color: #2980b9;             /* titres bleu ciel */
   margin-bottom: 20px;
 }
 
 p {
   font-weight: 400;
+  color: #aaaaaa;             /* texte gris clair */
 }
 
 /* Sections */
@@ -65,6 +67,7 @@ section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
+  background: white;           /* fond blanc pour toutes les sections */
 }
 
 /* Projects */
@@ -93,11 +96,12 @@ input, textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-family: 'Arimo', sans-serif;
+  color: #333;                /* texte gris foncé dans les champs */
 }
 
 button {
   padding: 10px;
-  background: #2E2E2E;
+  background: #2980b9;        /* bleu ciel pour le bouton */
   color: white;
   border: none;
   border-radius: 5px;
@@ -107,8 +111,9 @@ button {
 
 /* Footer */
 footer {
-  background: #333;
-  color: white;
+  background: white;           /* fond blanc */
+  color: #2980b9;              /* texte bleu ciel */
   text-align: center;
   padding: 20px 0;
 }
+
