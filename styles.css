@@ -8,14 +8,14 @@
 body {
   font-family: 'Arimo', sans-serif; /* <- ici la police fonctionne */
   background: #f9f9f9;
-  color: #333;
+  color: #666666;
   line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: #4CAF50;
-  color: white;
+  background: #154360;
+  color: #2E2E2E;
   padding: 20px 0;
 }
 
@@ -47,8 +47,8 @@ nav ul li a {
 #hero {
   text-align: center;
   padding: 100px 20px;
-  background: #6dd5ed;
-  color: white;
+  background: #666666;
+  color: #2980b9 ;
 }
 
 h2 {
@@ -97,7 +97,7 @@ input, textarea {
 
 button {
   padding: 10px;
-  background: #4CAF50;
+  background: #666666;
   color: white;
   border: none;
   border-radius: 5px;
