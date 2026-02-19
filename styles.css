@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Arimo', sans-serif; /* <- ici la police fonctionne */
-  background: #666666;
+  background: white;
   color: #0D8FFF;
   line-height: 1.6;
 }
