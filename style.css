@@ -9,7 +9,13 @@
 body {
   scroll-behavior: smooth;
   background-color: #f9f9f9;
-  color: #111;
+  color: #000; /* ✅ texte noir par défaut */
+}
+
+/* Forcer tout le texte en noir */
+p, h1, h2, h3, h4, h5, h6,
+a, li, span, small, label {
+  color: #000;
 }
 
 /* Navigation */
@@ -28,7 +34,6 @@ body {
   font-weight: 600;
   text-decoration: none;
   font-size: 24px;
-  color: #111;
 }
 
 .nav-links {
@@ -40,7 +45,7 @@ body {
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
-  color: #555;
+  color: #000; /* ✅ */
   transition: color 0.3s;
 }
 
@@ -51,34 +56,33 @@ body {
 /* Hero */
 .hero-section {
   height: 100vh;
-  background: white ;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  /* ❌ suppression du color: white */
 }
 
-/*.hero-section h1 span {
-  color: #ffd700;
-}*/
 .hero-image {
   width: 100%;
-  max-height: 260px;     /* ⬅️ LIMITE DURE */
+  max-height: 260px;
   overflow: hidden;
 }
 
 .hero-image img {
   display: block;
   width: 100% !important;
-  height: 260px !important;  /* ⬅️ FORCÉ */
+  height: 260px !important;
   object-fit: cover !important;
 }
+
+/* Bouton */
 .btn {
   margin-top: 15px;
   display: inline-block;
   padding: 10px 25px;
   background: #000;
-  color: #fff;
+  color: #fff; /* ✅ exception bouton */
   text-decoration: none;
   border-radius: 5px;
 }
@@ -98,7 +102,7 @@ body {
 
 .project-card {
   background: white;
-  width: 240px; /* 👈 plus compact */
+  width: 240px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 10px;
@@ -106,11 +110,10 @@ body {
 
 .project-card img {
   width: 100%;
-  height: 150px;      /* 👈 taille fixe */
-  object-fit: cover; /* 👈 recadre sans déformer */
+  height: 150px;
+  object-fit: cover;
   border-radius: 5px;
 }
-
 
 /* À propos */
 .about-section {
@@ -124,6 +127,11 @@ body {
   padding: 40px 20px;
   background: #111;
   color: white;
-  text-align: center;
+}
+
+.footer p,
+.footer a,
+.footer span {
+  color: #fff; /* ✅ texte blanc uniquement dans le footer */
 }
 
