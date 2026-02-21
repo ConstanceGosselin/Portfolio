@@ -9,7 +9,7 @@
 body {
   scroll-behavior: smooth;
   background-color: #f9f9f9;
-  color: #000; /* ✅ texte noir par défaut */
+  color: #000; /* texte noir par défaut */
 }
 
 /* Forcer tout le texte en noir */
@@ -45,7 +45,7 @@ a, li, span, small, label {
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
-  color: #000; /* ✅ */
+  color: #000;
   transition: color 0.3s;
 }
 
@@ -73,9 +73,7 @@ a, li, span, small, label {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* ❌ suppression du color: white */
 }
-
 
 /* Bouton */
 .btn {
@@ -83,37 +81,68 @@ a, li, span, small, label {
   display: inline-block;
   padding: 10px 25px;
   background: #000;
-  color: #fff; /* ✅ exception bouton */
+  color: #fff; /* exception bouton */
   text-decoration: none;
   border-radius: 5px;
 }
 
 /* Projets */
 .projects-section {
-  padding: 80px 20px;
+  padding: 120px 20px 80px; /* padding top plus grand pour navbar */
   text-align: center;
 }
 
 .cards-container {
   display: flex;
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  overflow-x: auto;       /* scroll horizontal */
+  padding-bottom: 10px;
+  scrollbar-width: thin;  /* Firefox */
 }
 
+.cards-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+/* Chaque carte projet */
 .project-card {
+  display: flex;           /* image à gauche, texte à droite */
+  flex-direction: row;
+  min-width: 500px;        /* nécessaire pour le scroll horizontal */
   background: white;
-  width: 240px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
   padding: 10px;
 }
 
 .project-card img {
-  width: 100%;
+  width: 200px;
   height: 150px;
   object-fit: cover;
   border-radius: 5px;
+  margin-right: 15px;
+}
+
+.project-card .project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 /* À propos */
@@ -128,10 +157,11 @@ a, li, span, small, label {
   padding: 40px 20px;
   background: #111;
   color: white;
+  text-align: center;
 }
 
 .footer p,
 .footer a,
 .footer span {
-  color: #fff; /* ✅ texte blanc uniquement dans le footer */
+  color: #fff;
 }
