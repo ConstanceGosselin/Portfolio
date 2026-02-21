@@ -54,15 +54,6 @@ a, li, span, small, label {
 }
 
 /* Hero */
-.hero-section {
-  height: 100vh;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* ❌ suppression du color: white */
-}
-
 .hero-image {
   width: 100%;
   max-height: 260px;
@@ -75,6 +66,16 @@ a, li, span, small, label {
   height: 260px !important;
   object-fit: cover !important;
 }
+
+.hero-section {
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ❌ suppression du color: white */
+}
+
 
 /* Bouton */
 .btn {
