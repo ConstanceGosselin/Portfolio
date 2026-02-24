@@ -94,11 +94,8 @@ a, li, span, small, label {
 }
 
 .split-slider .slider-left {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
+  background: #f4f4f4;
 }
-
 .split-slider .slider-left .slide {
   position: absolute;
   width: 100%;
@@ -107,11 +104,14 @@ a, li, span, small, label {
   transition: opacity 1s ease-in-out;
 }
 
+
 .split-slider .slider-left .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
+
+
 
 .split-slider .slider-left .slide.active {
   opacity: 1;
