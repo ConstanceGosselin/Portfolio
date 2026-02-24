@@ -125,7 +125,30 @@ a, li, span, small, label {
   flex-direction: column;
   justify-content: center;
 }
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
 
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
 /* À propos */
 .about-section {
   padding: 80px 20px;
