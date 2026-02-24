@@ -54,25 +54,45 @@ a, li, span, small, label {
 }
 
 /* Hero */
-.hero-image {
-  width: 100%;
-  max-height: 260px;
-  overflow: hidden;
-}
-
-.hero-image img {
-  display: block;
-  width: 100% !important;
-  height: 260px !important;
-  object-fit: cover !important;
-}
-
 .hero-section {
   height: 100vh;
   background: white;
   display: flex;
+  flex-direction: column;  /* pour que texte et image soient empilés */
+  justify-content: center; /* vertical */
+  align-items: center;     /* horizontal */
+  text-align: center;      /* centrer le texte */
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 700px;
+}
+
+.hero-text h1 {
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* Hero image */
+.hero-image {
+  width: 100%;
+  max-height: 260px;
+  overflow: hidden;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hero-image img {
+  display: block;
+  margin: 0 auto;
+  width: 100% !important;
+  height: 260px !important;
+  object-fit: cover !important;
 }
 
 /* Bouton */
@@ -93,7 +113,21 @@ a, li, span, small, label {
   height: 550px; /* meilleure lisibilité pour figures */
 }
 
-.split-slider .slider-left { flex: 1; position: relative; overflow: hidden; }
+.split-slider {
+  width: 100%;
+  display: flex;
+}
+
+.split-slider .slider-left { 
+  flex: 1.4; 
+  position: relative; 
+  overflow: hidden; 
+  display: flex;
+  justify-content: center; /* centrer l'image horizontalement */
+  align-items: center;     /* centrer l'image verticalement */
+  background: #f4f4f4;
+}
+
 .split-slider .slider-left .slide {
   position: absolute;
   width: 100%;
@@ -102,12 +136,8 @@ a, li, span, small, label {
   transition: opacity 1s ease-in-out;
 }
 
-
-.split-slider .slider-left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f4f4f4;
+.split-slider .slider-left .slide.active {
+  opacity: 1;
 }
 
 .split-slider .slider-left .slide img {
@@ -116,12 +146,8 @@ a, li, span, small, label {
   width: auto;
   height: auto;
   object-fit: contain;
-}
-
-
-
-.split-slider .slider-left .slide.active {
-  opacity: 1;
+  display: block;
+  margin: 0 auto;
 }
 
 .split-slider .slider-right {
@@ -131,14 +157,15 @@ a, li, span, small, label {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.split-slider .slider-left {
-  flex: 1.4;
+  align-items: center; /* centrer le texte horizontalement */
+  text-align: center;
 }
 
-.split-slider .slider-right {
-  flex: 1;
+.split-slider .slider-right p {
+  max-width: 500px;
+  line-height: 1.6;
 }
+
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -163,11 +190,16 @@ a, li, span, small, label {
 .slider-btn:hover {
   background: rgba(0,0,0,0.8);
 }
+
 /* À propos */
 .about-section {
   padding: 80px 20px;
   background: #fff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Footer */
@@ -176,14 +208,14 @@ a, li, span, small, label {
   background: #111;
   color: white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer p,
 .footer a,
 .footer span {
   color: #fff;
-}
-.split-slider .slider-right p {
-  max-width: 600px;
-  line-height: 1.6;
 }
