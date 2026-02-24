@@ -1,17 +1,24 @@
 // Si tu veux ajouter un menu mobile ou des animations + tard
 console.log("Mon portfolio chargé !");
-const slides = document.querySelectorAll('.split-slider .slide');
-let current = 0;
+document.querySelectorAll('.slider-left').forEach(slider => {
+  const slides = slider.querySelectorAll('.slide');
+  const nextBtn = slider.querySelector('.next');
+  const prevBtn = slider.querySelector('.prev');
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[i].classList.add('active');
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
   });
-}
 
-showSlide(current);
-
-setInterval(() => {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}, 3000); // défilement toutes les 3 secondes
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+});
