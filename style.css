@@ -90,7 +90,7 @@ a, li, span, small, label {
 .projects-section {
   padding: 120px 20px 80px;
   display: flex;
-  height: 500px; /* hauteur du slider */
+  height: 550px; /* meilleure lisibilité pour figures */
 }
 
 .split-slider .slider-left { flex: 1; position: relative; overflow: hidden; }
@@ -103,9 +103,18 @@ a, li, span, small, label {
 }
 
 
+.split-slider .slider-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+}
+
 .split-slider .slider-left .slide img {
   max-width: 100%;
   max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
 }
 
@@ -122,6 +131,13 @@ a, li, span, small, label {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.split-slider .slider-left {
+  flex: 1.4;
+}
+
+.split-slider .slider-right {
+  flex: 1;
 }
 .slider-btn {
   position: absolute;
@@ -166,4 +182,8 @@ a, li, span, small, label {
 .footer a,
 .footer span {
   color: #fff;
+}
+.split-slider .slider-right p {
+  max-width: 600px;
+  line-height: 1.6;
 }
