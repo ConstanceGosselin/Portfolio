@@ -26,7 +26,7 @@
 
   <link
     rel="preconnect"
-    href="https://fonts.googleapis.com"
+    href="https://fonts.gstatic.com"
     crossorigin
   >
 
@@ -91,7 +91,6 @@
 
   <header class="hero-section">
 
-
     <div class="hero-image">
 
       <img
@@ -108,11 +107,9 @@
         GEOSPATIAL DATA SCIENTIST · CLIMATE & DISASTER RISK
       </p>
 
-
       <h1>
         Constance Gosselin
       </h1>
-
 
       <p class="intro">
         I work at the intersection of geospatial data, climate science
@@ -120,7 +117,6 @@
         analysis, remote sensing, statistical modelling and machine
         learning to investigate climate-related hazards and their impacts.
       </p>
-
 
       <div class="hero-buttons">
 
@@ -130,7 +126,6 @@
         >
           View my projects
         </a>
-
 
         <a
           href="CV.pdf"
@@ -173,12 +168,12 @@
 
     <article class="project-card">
 
-
       <div class="project-image">
 
         <img
           src="Figure_22.png"
           alt="Coastal storm-swell analysis in the Canary Islands"
+          class="clickable-image"
         >
 
       </div>
@@ -190,16 +185,13 @@
           CLIMATE RISK · SPATIAL DATA SCIENCE
         </p>
 
-
         <h3>
           Coastal Storm-Swell Risk Modelling
         </h3>
 
-
         <p class="project-location">
           Canary Islands · IMPLACOST · University of La Laguna
         </p>
-
 
         <p>
           Analysis of extratropical storm swells affecting the Canary
@@ -208,7 +200,6 @@
           to investigate storm characteristics and their spatial
           patterns of impact.
         </p>
-
 
         <div class="project-tags">
 
@@ -220,7 +211,6 @@
           <span>Machine Learning</span>
 
         </div>
-
 
         <a
           href="projects/implacost.html"
@@ -238,12 +228,12 @@
 
     <article class="project-card">
 
-
       <div class="project-image">
 
         <img
           src="LISA.jpg"
           alt="Spatial analysis of population mobility following the Türkiye earthquake"
+          class="clickable-image"
         >
 
       </div>
@@ -255,16 +245,13 @@
           DISASTER RISK · HUMAN MOBILITY
         </p>
 
-
         <h3>
           Disaster-Related Population Mobility
         </h3>
 
-
         <p class="project-location">
           Türkiye · 2023 earthquake · Master thesis
         </p>
-
 
         <p>
           Analysis and validation of Meta movement data to investigate
@@ -273,7 +260,6 @@
           analysis and statistical methods to assess the potential of
           digital mobility data for disaster research.
         </p>
-
 
         <div class="project-tags">
 
@@ -284,7 +270,6 @@
           <span>Spatial Analysis</span>
 
         </div>
-
 
         <a
           href="projects/meta-mobility.html"
@@ -302,12 +287,12 @@
 
     <article class="project-card">
 
-
       <div class="project-image">
 
         <img
           src="Figure_7.png"
           alt="Typhoon vulnerability assessment in the Philippines"
+          class="clickable-image"
         >
 
       </div>
@@ -319,23 +304,19 @@
           CLIMATE IMPACTS · VULNERABILITY
         </p>
 
-
         <h3>
           Typhoon Vulnerability Assessment
         </h3>
 
-
         <p class="project-location">
           Philippines · Climate vulnerability analysis
         </p>
-
 
         <p>
           Spatial assessment of typhoon vulnerability combining
           climate-related and socioeconomic indicators to investigate
           patterns of exposure and vulnerability across affected areas.
         </p>
-
 
         <div class="project-tags">
 
@@ -345,7 +326,6 @@
           <span>Spatial Analysis</span>
 
         </div>
-
 
         <a
           href="projects/philippines.html"
@@ -382,7 +362,6 @@
 
     </div>
 
-
     <p>
       I am a geographer and geospatial data scientist working on
       climate-related hazards, environmental change and spatial risk.
@@ -390,13 +369,11 @@
       statistical modelling and machine learning.
     </p>
 
-
     <p>
       I currently work as a Spatial Data Scientist at the University
       of La Laguna, where I contribute to research on coastal resilience
       and climate-related extreme events.
     </p>
-
 
     <p>
       My interests include climate risk, disaster impacts, Earth
@@ -430,7 +407,6 @@
 
 
     <div class="skills-grid">
-
 
       <div>
 
@@ -505,17 +481,14 @@
       Let's connect
     </h2>
 
-
     <p>
       Interested in geospatial data, climate risk or environmental
       modelling? Feel free to get in touch.
     </p>
 
-
     <p>
       ✉️ your-email@example.com
     </p>
-
 
     <div class="footer-links">
 
@@ -526,7 +499,6 @@
       >
         GitHub
       </a>
-
 
       <a
         href="https://www.linkedin.com/"
@@ -539,6 +511,32 @@
     </div>
 
   </footer>
+
+
+  <!-- =========================
+       IMAGE LIGHTBOX
+  ========================= -->
+
+  <div
+    id="image-lightbox"
+    class="image-lightbox"
+    aria-hidden="true"
+  >
+
+    <button
+      class="lightbox-close"
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <img
+      id="lightbox-image"
+      src=""
+      alt=""
+    >
+
+  </div>
 
 
   <script src="script.js"></script>
