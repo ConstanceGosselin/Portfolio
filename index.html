@@ -1,117 +1,366 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Portfolio</title>
+
+  <title>Constance Gosselin | Geospatial Data Scientist</title>
+
   <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 </head>
+
 <body>
 
   <!-- Navigation -->
   <nav class="navbar">
-    <a href="#accueil" class="logo">Constance Gosselin</a>
+
+    <a href="index.html" class="logo">
+      Constance Gosselin
+    </a>
+
     <ul class="nav-links">
-      <li><a href="#projets">Projets</a></li>
-      <li><a href="#a-propos">À propos</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
 
-  <!-- Hero Section -->
-  <header id="accueil" class="hero-section">
+
+  <!-- HERO -->
+  <header class="hero-section">
+
+    <div class="hero-image">
+      <img src="photo_maison.jpg" alt="Constance Gosselin">
+    </div>
+
     <div class="hero-text">
-      <h1>Géographe spécialisé dans le dérèglement climatique</span></h1>
-      <p> Je suis diplômée d'un Master en Géographie, Global Change, à l'Université de Liège. 
-      Après plusieurs projets de recherche sur le climat, la météorologie et la gestion des risques, 
-      je m'intéresse désormais à l'analyse des données environnementales et à la communication scientifique.</p>
-      <a href="#projets" class="btn">Voir mes projets</a>
+
+      <p class="eyebrow">
+        GEOSPATIAL DATA SCIENTIST · CLIMATE & DISASTER RISK
+      </p>
+
+      <h1>
+        Constance Gosselin
+      </h1>
+
+      <p class="intro">
+        I work at the intersection of geospatial data, climate science
+        and environmental risk. I use spatial and spatio-temporal analysis,
+        remote sensing, statistical modelling and machine learning to
+        investigate climate-related hazards and their impacts.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#projects" class="btn">
+          View my projects
+        </a>
+
+        <a href="CV.pdf" class="btn secondary">
+          Download CV
+        </a>
+
+      </div>
+
     </div>
+
   </header>
-<!-- Image de transition -->
-<section class="hero-image">
-  <img src="photo_maison.jpg" alt="Image de présentation">
-</section>
 
-  <!-- Projets -
-<!-- Projets -->
 
-<section id="projets" class="projects-section split-slider">
-<div class="slider-left">
-  <div class="slide active"><img src="Figure_22.png"></div>
-  <div class="slide"><img src="Figure_5.jpg"></div>
-  <div class="slide"><img src="Figure_7.png"></div>
-  <button class="slider-btn prev">‹</button>
-  <button class="slider-btn next">›</button>
-</div>
-  <div class="slider-right">
-    <h2>Projet 1 : Aléa naturel et Big Data</h2>
-    <p><strong> Validation spatiale de l'utilisation d'une donnée de mobilité open source dans un contexte d'aléas naturels</strong> Ce projet est actuellement en cours de révision à Spatial Information Research Journal.
-     Analyse de la mobilité humaine en Türkiye (2023) à partir de données Data for Good issues de Facebook, couplées aux limites administratives de GADM (niveau district). 
-      Le projet mobilise des méthodes statistiques (ANOVA, tests de sensibilité basés sur des anomalies) pour évaluer l’impact des perturbations routinières et des aléas naturels sur les dynamiques de mobilité
-      (immobilité, déplacements de courte et moyenne distance). Les résultats mettent en évidence des relations significatives entre mobilité et facteurs sociodémographiques,
-      et démontrent la capacité de MDM à détecter des anomalies spatiales lors d’événements extrêmes, malgré certaines limites de représentativité des données.</p>
-  </div>
-</section>
-  <section id="projets" class="projects-section split-slider">
-<div class="slider-left">
-  <div class="slide active"><img src="Capture d'écran 2026-02-24 230249.png"></div>
-  <div class="slide"><img src="Figure_7.png"></div>
-  <div class="slide"><img src="photo_maison.jpg"></div>
-  <button class="slider-btn prev">‹</button>
-  <button class="slider-btn next">›</button>
-</div>
-  <div class="slider-right">
-    <h2>Mes projets</h2>
-    <p><strong>Projet 2 :</strong> Validation spatiale de l'utilisation d'une donnée de mobilité open source dans un contexte d'aléas naturels.</p>
-  </div>
-</section>
-    <!-- Ajoute d'autres cartes si nécessaire -->
-  <section id="projets" class="projects-section split-slider">
-  <div class="slider-left">
-    <!-- Slide 1: Leaflet Map -->
-    <div class="slide active">
-      <iframe src="leaflet_map.html" 
-              width="100%" 
-              height="500px" 
-              style="border:none;" 
-              title="Carte interactive Leaflet">
-      </iframe>
+  <!-- SELECTED PROJECTS -->
+  <section id="projects" class="projects-section">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        SELECTED WORK
+      </p>
+
+      <h2>
+        Projects
+      </h2>
+
     </div>
 
 
-  </div>
+    <!-- PROJECT 1 -->
+    <article class="project-card">
 
-  <div class="slider-right">
-    <h2>Projet 3 : Santé et climat</h2>
+      <div class="project-image">
+
+        <img
+          src="Figure_22.png"
+          alt="Coastal storm-swell analysis"
+        >
+
+      </div>
+
+      <div class="project-content">
+
+        <p class="project-type">
+          CLIMATE RISK · SPATIAL DATA SCIENCE
+        </p>
+
+        <h3>
+          Coastal Storm-Swell Risk Modelling
+        </h3>
+
+        <p class="project-location">
+          Canary Islands · IMPLACOST · University of La Laguna
+        </p>
+
+        <p>
+          Analysis of extratropical storm swells affecting the Canary
+          Islands using environmental data, spatial statistics,
+          clustering and machine-learning methods.
+        </p>
+
+        <div class="project-tags">
+
+          <span>Python</span>
+          <span>GeoPandas</span>
+          <span>xarray</span>
+          <span>DBSCAN</span>
+          <span>MGWR</span>
+          <span>Machine Learning</span>
+
+        </div>
+
+        <a href="projects/implacost.html" class="project-link">
+          View project →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- PROJECT 2 -->
+    <article class="project-card">
+
+      <div class="project-image">
+
+        <img
+          src="Figure_5.jpg"
+          alt="Population mobility analysis in Türkiye"
+        >
+
+      </div>
+
+      <div class="project-content">
+
+        <p class="project-type">
+          DISASTER RISK · HUMAN MOBILITY
+        </p>
+
+        <h3>
+          Disaster-Related Population Mobility
+        </h3>
+
+        <p class="project-location">
+          Türkiye · 2023 earthquake
+        </p>
+
+        <p>
+          Analysis and validation of Meta movement data to investigate
+          changes in population mobility following a major earthquake,
+          using spatial and statistical methods.
+        </p>
+
+        <div class="project-tags">
+
+          <span>Python</span>
+          <span>R</span>
+          <span>GADM</span>
+          <span>Mobility Data</span>
+          <span>Spatial Analysis</span>
+
+        </div>
+
+        <a href="projects/meta-mobility.html" class="project-link">
+          View project →
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- PROJECT 3 -->
+    <article class="project-card">
+
+      <div class="project-image">
+
+        <img
+          src="Figure_7.png"
+          alt="Typhoon vulnerability analysis"
+        >
+
+      </div>
+
+      <div class="project-content">
+
+        <p class="project-type">
+          CLIMATE IMPACTS · VULNERABILITY
+        </p>
+
+        <h3>
+          Typhoon Vulnerability Assessment
+        </h3>
+
+        <p class="project-location">
+          Philippines
+        </p>
+
+        <p>
+          Spatial assessment of typhoon vulnerability combining
+          climate-related and socioeconomic indicators to identify
+          patterns of exposure and vulnerability.
+        </p>
+
+        <div class="project-tags">
+
+          <span>R</span>
+          <span>Climate Data</span>
+          <span>Socioeconomic Data</span>
+          <span>Spatial Analysis</span>
+
+        </div>
+
+        <a href="projects/philippines.html" class="project-link">
+          View project →
+        </a>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        ABOUT
+      </p>
+
+      <h2>
+        About me
+      </h2>
+
+    </div>
+
     <p>
-      <strong>Transition des tiques en Europe liée à l'humidité relative</strong>  
-      Validation spatiale de l'utilisation d'une donnée de mobilité open source dans un contexte d'aléas naturels.  
-      Cette carte interactive permet de visualiser les distributions de différentes espèces de tiques et les différences de l’humidité relative moyenne.
+      I am a geographer and geospatial data scientist working on
+      climate-related hazards, environmental change and spatial risk.
+      My work combines geospatial analysis, environmental data,
+      statistical modelling and machine learning.
     </p>
-  </div>
-</section>
-    <!-- Ajoute d'autres cartes si nécessaire -->
-  </div>
-</section>
-  </section>
+
+    <p>
+      I currently work as a Spatial Data Scientist at the University
+      of La Laguna, where I contribute to research on coastal resilience
+      and climate-related extreme events.
+    </p>
+
   </section>
 
-  <!-- À propos -->
-  <section id="a-propos" class="about-section">
-    <h2>À propos de moi</h2>
-    <p>Je suis passionné par le développement front-end et j’aime créer des expériences web intuitives.</p>
+
+  <!-- SKILLS -->
+  <section class="skills-section">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        TECHNICAL SKILLS
+      </p>
+
+      <h2>
+        Tools & methods
+      </h2>
+
+    </div>
+
+    <div class="skills-grid">
+
+      <div>
+        <h3>Geospatial</h3>
+        <p>
+          QGIS · ArcGIS · GeoPandas · Rasterio · Google Earth Engine
+        </p>
+      </div>
+
+      <div>
+        <h3>Programming</h3>
+        <p>
+          Python · R · xarray · pandas · scikit-learn
+        </p>
+      </div>
+
+      <div>
+        <h3>Spatial analysis</h3>
+        <p>
+          Spatial statistics · GWR/MGWR · LISA · DBSCAN ·
+          Spatio-temporal analysis
+        </p>
+      </div>
+
+      <div>
+        <h3>Climate & Earth observation</h3>
+        <p>
+          ERA5 · Copernicus · Sentinel · Landsat · NetCDF
+        </p>
+      </div>
+
+    </div>
+
   </section>
 
-  <!-- Contact -->
+
+  <!-- CONTACT -->
   <footer id="contact" class="footer">
-    <h3>Contact</h3>
-    <p>✉️ monemail@example.com</p>
+
+    <h2>
+      Let's connect
+    </h2>
+
+    <p>
+      Interested in geospatial data, climate risk or environmental
+      modelling? Feel free to get in touch.
+    </p>
+
+    <p>
+      ✉️ your-email@example.com
+    </p>
+
+    <div class="footer-links">
+
+      <a href="https://github.com/">
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/">
+        LinkedIn
+      </a>
+
+    </div>
+
   </footer>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
