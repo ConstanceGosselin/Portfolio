@@ -80,29 +80,29 @@ img {
    HERO
 ========================= */
 
-.hero-section {
+..hero-section {
   min-height: 100vh;
 
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
   gap: 8%;
 
-  padding: 140px 10% 100px;
+  padding: 120px 10% 80px;
 
   background: #fff;
 }
-
 .hero-image {
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   justify-self: center;
 }
 
 .hero-image img {
   width: 100%;
-  height: 500px;
-  object-fit: cover;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
   border-radius: 4px;
 }
 
