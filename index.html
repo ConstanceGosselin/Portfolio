@@ -668,52 +668,44 @@ content="width=device-width, initial-scale=1.0"
        CONTACT
   ========================= -->
 
-  <footer
-    id="contact"
-    class="footer"
-  >
+<footer class="footer" id="contact">
 
-```
-<h2>
-  Let's connect
-</h2>
+  <div class="footer-container">
 
-<p>
-  Interested in geospatial data, climate risk or environmental
-  modelling? Feel free to get in touch.
-</p>
+    <div class="footer-content">
 
+      <p class="footer-eyebrow">LET'S CONNECT</p>
 
-<p>
-  ✉️
-  <a href="mailto:gosselinconstance@outlook.com">
-    gosselinconstance@outlook.com
-  </a>
-</p>
+      <h2>Let's work with data<br>to understand risk.</h2>
 
+      <p class="footer-text">
+        Interested in climate impacts, geospatial data and
+        environmental risk? Get in touch.
+      </p>
 
-<div class="footer-links">
+      <div class="footer-links">
+        <a href="mailto:gosselinconstance@outlook.com">Email</a>
+        <a href="https://github.com/">GitHub</a>
+        <a href="https://www.linkedin.com/">LinkedIn</a>
+      </div>
 
-  <a
-    href="https://github.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    GitHub
-  </a>
+    </div>
 
-  <a
-    href="https://www.linkedin.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    LinkedIn
-  </a>
+    <div class="footer-map">
 
-</div>
-```
+      <img
+        src="volcano_map.png"
+        alt="Volcanic hazard map produced by Constance Gosselin"
+        class="clickable-image"
+      >
 
-  </footer>
+      <p>Volcanic hazard mapping · Spatial analysis</p>
+
+    </div>
+
+  </div>
+
+</footer>
 
   <!-- =========================
        IMAGE LIGHTBOX
@@ -739,7 +731,7 @@ content="width=device-width, initial-scale=1.0"
   src=""
   alt=""
 >
-```
+
 
   </div>
 
@@ -752,19 +744,3 @@ content="width=device-width, initial-scale=1.0"
 </body>
 
 </html>
-```
-
-### Ce que j'ai corrigé
-
-* **Hero** : `photo_maison.jpg` est maintenant un vrai arrière-plan, derrière ton nom.
-* **Overlay sombre** : permet de garder le texte lisible sur la photo.
-* **Suppression du doublon énorme** dans `WHAT I WORK ON`.
-* Les **3 cartes** sont maintenant correctement fermées.
-* Le conteneur `about-container` manquant est ajouté.
-* Le `hero-image` a complètement disparu, puisqu'il n'est plus nécessaire.
-* Les trois projets restent présents.
-* Le lightbox reste présent pour toutes les images ayant `class="clickable-image"`.
-* Le `mailto:` est correct.
-* La structure HTML est maintenant propre et équilibrée.
-
-**Attention :** avec ce nouveau HTML, il faut utiliser le `style.css` que je t'ai donné juste avant, notamment la partie `.hero-background`, `.hero-overlay` et `.hero-text`. Ensuite, si le clic sur les images ne fonctionne toujours pas, le prochain fichier à vérifier est **`script.js`** : c'est lui qui contrôle réellement le lightbox.
