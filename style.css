@@ -394,17 +394,13 @@ a {
   position: relative;
   min-height: 600px;
   padding: 140px 10%;
+
   display: flex;
   align-items: center;
+
   overflow: hidden;
 
-  /*
-     IMPORTANT:
-     Put the exact name of your volcanic map here.
-  */
-
-  background-image: url("volcano_map.png");
-
+  background-image: url("Mount_Cameroun_.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -418,13 +414,14 @@ a {
 .footer-overlay {
   position: absolute;
   inset: 0;
-  z-index: 1;
 
-  background: rgba(0, 0, 0, 0.58);
+  background: rgba(0, 0, 0, 0.55);
+
+  z-index: 1;
 }
 
 
-/* Footer content */
+/* Footer text */
 
 .footer-content {
   position: relative;
@@ -441,7 +438,7 @@ a {
   letter-spacing: 3px;
   text-transform: uppercase;
 
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .footer-content h2 {
@@ -460,7 +457,7 @@ a {
   font-size: 17px;
   line-height: 1.7;
 
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-links {
@@ -484,7 +481,6 @@ a {
 .footer-links a:hover {
   opacity: 0.6;
 }
-
 
 /* =========================
    IMAGE LIGHTBOX
