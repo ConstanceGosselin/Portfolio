@@ -1,530 +1,756 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <title>
-        Disaster-Related Population Mobility | Constance Gosselin
-    </title>
+<title>
+    Disaster-Related Population Mobility | Constance Gosselin
+</title>
 
-    <link
-        rel="stylesheet"
-        href="../style.css"
-    >
+<link
+    rel="stylesheet"
+    href="../style.css"
+>
+```
 
 </head>
 
-
 <body>
 
+```
+<!-- =========================
+     NAVIGATION
+========================== -->
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+<nav class="navbar">
 
-    <nav class="navbar">
+    <a
+        href="../index.html"
+        class="logo"
+    >
+        Constance Gosselin
+    </a>
 
-        <a
-            href="../index.html"
-            class="logo"
-        >
-            Constance Gosselin
+    <div class="nav-links">
+
+        <a href="../index.html#projects">
+            Projects
         </a>
 
-        <div class="nav-links">
+        <a href="../index.html#about">
+            About
+        </a>
 
-            <a href="../index.html#projects">
-                Projects
-            </a>
+        <a href="../index.html#skills">
+            Skills
+        </a>
 
-            <a href="../index.html#about">
-                About
-            </a>
+        <a href="../index.html#contact">
+            Contact
+        </a>
 
-            <a href="../index.html#skills">
-                Skills
-            </a>
+    </div>
 
-            <a href="../index.html#contact">
-                Contact
-            </a>
+</nav>
+
+
+
+<!-- =========================
+     PROJECT HEADER
+========================== -->
+
+<header class="project-header">
+
+    <div class="project-header-inner">
+
+        <a
+            href="../index.html#projects"
+            class="project-back"
+        >
+            ← Back to projects
+        </a>
+
+        <p class="project-category">
+            DISASTER RISK · HUMAN MOBILITY · GEOSPATIAL DATA
+        </p>
+
+        <h1>
+            Disaster-Related<br>
+            Population Mobility
+        </h1>
+
+        <div class="project-meta">
+
+            <span>
+                Türkiye
+            </span>
+
+            <span>
+                2023 earthquake
+            </span>
+
+            <span>
+                Master thesis
+            </span>
 
         </div>
 
-    </nav>
+        <p class="project-summary">
+            Analysis and validation of Meta Movement Data
+            to investigate population mobility following
+            the 6 February 2023 earthquake in Türkiye.
+        </p>
+
+    </div>
+
+</header>
 
 
 
-    <!-- =========================
-         PROJECT HEADER
-    ========================== -->
+<!-- =========================
+     COVER IMAGE
+========================== -->
 
-    <header class="project-header">
+<section class="project-image-section">
 
-        <div class="project-header-inner">
+    <img
+        src="../Images/Aftershocks_All_Turkey.png"
+        alt="Disaster-related population mobility in Türkiye"
+        class="project-main-image"
+    >
 
-            <a
-                href="../index.html#projects"
-                class="project-back"
-            >
-                ← Back to projects
-            </a>
+</section>
 
-            <p class="project-category">
-                DISASTER RISK · HUMAN MOBILITY · HUMANITARIAN 
+
+
+<!-- =========================
+     QUESTION
+========================== -->
+
+<section class="project-content">
+
+    <div class="project-content-inner">
+
+        <div class="section-heading">
+
+            <span>
+                01
+            </span>
+
+            <p>
+                QUESTION
             </p>
 
-            <h1>
-                Disaster-Related<br>
-                Population Mobility
-            </h1>
+        </div>
 
-            <div class="project-meta">
+
+        <h2 class="project-question">
+            How can Meta Movement Data reveal
+            population mobility following a major earthquake?
+        </h2>
+
+
+        <div class="project-two-column">
+
+            <div></div>
+
+            <p>
+                Major disasters can disrupt population mobility
+                across space and time. This study investigated
+                whether aggregated Meta Movement Data could
+                capture these changes and provide useful
+                information for analysing disaster-related mobility.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     DATA
+========================== -->
+
+<section class="project-content project-grey">
+
+    <div class="project-content-inner">
+
+        <div class="section-heading">
+
+            <span>
+                02
+            </span>
+
+            <p>
+                DATA
+            </p>
+
+        </div>
+
+
+        <h2>
+            Data and analytical structure
+        </h2>
+
+
+        <div class="project-figure">
+
+            <img
+                src="../Images/Autre_donnee.png"
+                alt="Data sources and analytical structure"
+            >
+
+            <p>
+                Overview of the datasets and contextual information
+                used in the analysis.
+            </p>
+
+        </div>
+
+
+        <div class="project-figure secondary-figure">
+
+            <img
+                src="../Images/MDM_organigramme.png"
+                alt="Structure of Meta Movement Data"
+            >
+
+            <p>
+                Structure of the Meta Movement Data used in the study.
+            </p>
+
+        </div>
+
+
+        <div class="project-figure secondary-figure">
+
+            <video
+                controls
+                playsinline
+                class="project-video"
+            >
+
+                <source
+                    src="../Images/Video.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video element.
+
+            </video>
+
+            <p>
+                Example of the raw Meta Movement Data retrieved
+                for one bandwidth.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     METHODOLOGY
+========================== -->
+
+<section class="project-content">
+
+    <div class="project-content-inner">
+
+        <div class="section-heading">
+
+            <span>
+                03
+            </span>
+
+            <p>
+                METHODOLOGY
+            </p>
+
+        </div>
+
+
+        <h2>
+            From mobility observations
+            to disaster analysis
+        </h2>
+
+
+        <div class="project-figure methodology-figure">
+
+            <img
+                src="../Images/Overall_scheme.png"
+                alt="Overall methodological workflow"
+            >
+
+            <p>
+                Overall analytical workflow.
+            </p>
+
+        </div>
+
+
+        <div class="project-figure methodology-figure">
+
+            <img
+                src="../Images/Memoire_scheme_sum.png"
+                alt="Summary of the analytical methodology"
+            >
+
+            <p>
+                Analytical framework developed for the study.
+            </p>
+
+        </div>
+
+
+        <div class="project-figure methodology-figure">
+
+            <img
+                src="../Images/Sensitivity_tests.png"
+                alt="Sensitivity tests applied to Meta Movement Data"
+            >
+
+            <p>
+                Sensitivity analyses used to assess the robustness
+                of the mobility observations.
+            </p>
+
+        </div>
+
+
+        <div class="project-two-column methodology-description">
+
+            <div></div>
+
+            <p>
+                The analysis combined temporal comparisons,
+                spatial analysis and statistical modelling to
+                assess mobility changes before and after the
+                2023 earthquake. Meta Movement Data were
+                analysed at different spatial scales and
+                compared with geographic and socio-demographic
+                characteristics to investigate data sensitivity,
+                spatial variation and potential sources of bias.
+            </p>
+
+        </div>
+
+
+        <div class="methodology-tags">
+
+            <span>
+                Temporal analysis
+            </span>
+
+            <span>
+                Spatial analysis
+            </span>
+
+            <span>
+                Local Moran's I
+            </span>
+
+            <span>
+                Correlation analysis
+            </span>
+
+            <span>
+                Linear regression
+            </span>
+
+            <span>
+                Sensitivity analysis
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     RESULTS
+========================== -->
+
+<section class="project-content project-results">
+
+    <div class="project-content-inner">
+
+        <div class="section-heading">
+
+            <span>
+                04
+            </span>
+
+            <p>
+                RESULTS
+            </p>
+
+        </div>
+
+
+        <h2>
+            What the data reveal
+        </h2>
+
+
+
+        <!-- =========================
+             RESULT 01
+        ========================== -->
+
+        <article class="result">
+
+            <div class="result-header">
 
                 <span>
-                    Türkiye
+                    04.1
                 </span>
 
-                <span>
-                    2023 earthquake
-                </span>
-
-                <span>
-                    Master thesis
-                </span>
+                <h3>
+                    Temporal patterns
+                </h3>
 
             </div>
 
-            <p class="project-summary">
-                Analysis and validation of Meta Movement Data
-                to investigate population mobility following
-                the 6 February 2023 earthquake in Türkiye.
+
+            <div class="result-content">
+
+                <div></div>
+
+                <div>
+
+                    <p class="result-finding">
+                        Mobility patterns changed substantially
+                        following the earthquake, with distinct
+                        temporal responses across affected areas.
+                    </p>
+
+
+                    <p>
+                        The temporal analysis was used to identify
+                        changes in mobility before and after the
+                        disaster and to examine how these responses
+                        evolved through time.
+                    </p>
+
+
+                    <div class="result-figure">
+
+                        <img
+                            src="../Images/TS.png"
+                            alt="Temporal evolution of population mobility"
+                        >
+
+                    </div>
+
+                    <p class="figure-caption">
+                        Temporal evolution of population mobility
+                        observed in the Meta Movement Data.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             RESULT 02
+        ========================== -->
+
+        <article class="result">
+
+            <div class="result-header">
+
+                <span>
+                    04.2
+                </span>
+
+                <h3>
+                    Validation and influencing factors
+                </h3>
+
+            </div>
+
+
+            <div class="result-content">
+
+                <div></div>
+
+                <div>
+
+                    <p class="result-finding">
+                        Differences in Meta Movement Data were
+                        associated with geographic and
+                        socio-demographic characteristics,
+                        highlighting important sources of spatial
+                        variation and potential bias.
+                    </p>
+
+
+                    <p>
+                        The analysis examined relationships between
+                        differences in Meta Movement Data and
+                        selected geographic and socio-demographic
+                        variables to assess the sensitivity and
+                        representativeness of the data.
+                    </p>
+
+
+                    <div class="result-figure">
+
+                        <img
+                            src="../Images/sensitivity_test_result.png"
+                            alt="Validation and sensitivity analysis of Meta Movement Data"
+                        >
+
+                    </div>
+
+                    <p class="figure-caption">
+                        Relationships between differences in Meta
+                        Movement Data and selected contextual factors.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             RESULT 03
+        ========================== -->
+
+        <article class="result">
+
+            <div class="result-header">
+
+                <span>
+                    04.3
+                </span>
+
+                <h3>
+                    Earthquake-related mobility
+                </h3>
+
+            </div>
+
+
+            <div class="result-content">
+
+                <div></div>
+
+                <div>
+
+                    <p class="result-finding">
+                        The 6 February 2023 earthquake was associated
+                        with marked changes in population mobility,
+                        revealing a measurable disruption in movement
+                        patterns across affected areas.
+                    </p>
+
+
+                    <p>
+                        Mobility changes were analysed in relation
+                        to the spatial distribution and intensity
+                        of the earthquake impacts to investigate
+                        differences in population response.
+                    </p>
+
+
+                    <div class="result-figure">
+
+                        <img
+                            src="../Images/EQ_TS.png"
+                            alt="Population mobility following the 2023 Türkiye earthquake"
+                        >
+
+                    </div>
+
+                    <p class="figure-caption">
+                        Population mobility before and after the
+                        6 February 2023 earthquake.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     KEY TAKEAWAYS
+========================== -->
+
+<section class="project-content project-grey project-takeaways">
+
+    <div class="project-content-inner">
+
+        <div class="section-heading">
+
+            <span>
+                05
+            </span>
+
+            <p>
+                KEY TAKEAWAYS
             </p>
 
         </div>
 
-    </header>
+
+        <h2>
+            What this study shows
+        </h2>
 
 
+        <div class="takeaways">
 
-    <!-- =========================
-         COVER IMAGE
-    ========================== -->
-
-    <section class="project-image-section">
-
-        <img
-            src="../Images/Aftershocks_All_Turkey.png"
-            alt="Disaster-related population mobility in Türkiye"
-            class="project-main-image"
-        >
-
-    </section>
-
-
-
-    <!-- =========================
-         QUESTION
-    ========================== -->
-
-    <section class="project-content">
-
-        <div class="project-content-inner">
-
-            <div class="section-heading">
+            <div class="takeaway">
 
                 <span>
                     01
                 </span>
 
                 <p>
-                    QUESTION
+                    <strong>
+                        Disaster-related mobility can be observed
+                        through aggregated movement data.
+                    </strong>
+                    Meta Movement Data provide a dynamic perspective
+                    on changes in population movement following a
+                    major disaster.
                 </p>
 
             </div>
 
 
-            <h2 class="project-question">
-                How can Meta Movement Data reveal
-                population mobility following a major earthquake?
-            </h2>
-
-
-            <div class="project-two-column">
-
-                <div></div>
-
-                <p>
-                    Major disasters can disrupt population mobility
-                    across space and time. This study investigated
-                    whether aggregated Meta Movement Data could
-                    capture these changes and provide useful
-                    information for analysing disaster-related mobility.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         DATA
-    ========================== -->
-
-    <section class="project-content project-grey">
-
-        <div class="project-content-inner">
-
-            <div class="section-heading">
+            <div class="takeaway">
 
                 <span>
                     02
                 </span>
 
                 <p>
-                    DATA
+                    <strong>
+                        Data representativeness varies across contexts.
+                    </strong>
+                    Geographic and socio-demographic characteristics
+                    can influence observed differences and should be
+                    considered when interpreting mobility indicators.
                 </p>
 
             </div>
 
 
-            <h2>
-                Data and analytical structure
-            </h2>
-
-
-            <div class="project-figure">
-
-                <img
-                    src="../Images/Autre_donnee.png"
-                    alt="Data sources and analytical structure"
-                >
-
-                <p>
-                    Data sources and analytical structure.
-                </p>
-
-            </div>
-
-
-            <div class="project-figure secondary-figure">
-
-                <img
-                    src="../Images/MDM_organigramme.png"
-                    alt="Structure of Meta Movement Data"
-                >
-
-                <p>
-                    Structure of the Meta Movement Data used in the study.
-                </p>
-
-            </div>
-            
-            <div class="project-figure secondary-figure">
-
-                <img
-                    src="../Images/Video.mp4"
-                    alt="Results of the raw Meta Movement data downloaded for one bandwidth"
-                >
-
-                <p>
-                    Raw Meta Movement data downloaded for one bandwidth.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         METHODOLOGY
-    ========================== -->
-
-    <section class="project-content">
-
-        <div class="project-content-inner">
-
-            <div class="section-heading">
+            <div class="takeaway">
 
                 <span>
                     03
                 </span>
 
                 <p>
-                    METHODOLOGY
+                    <strong>
+                        Mobility data can complement conventional
+                        disaster-impact information.
+                    </strong>
+                    Temporal and spatial mobility patterns provide
+                    an additional perspective for understanding
+                    population responses to disasters.
                 </p>
 
             </div>
 
+        </div>
 
-            <h2>
-                From mobility observations
-                to disaster analysis
-            </h2>
+    </div>
 
-
-            <div class="project-figure methodology-figure">
-
-                <img
-                    src="../Images/Overall_scheme.png"
-                    alt="Methodological workflow"
-                >
-
-            </div>
-               <div class="project-figure methodology-figure">
-
-                <img
-                    src="../Images/Memoire_scheme_sum.png"
-                    alt="Methodological workflow"
-                >
+</section>
 
 
-            </div>
 
-                        </div>
-               <div class="project-figure methodology-figure">
+<!-- =========================
+     TOOLS & DATA
+========================== -->
 
-                <img
-                    src="../Images/Sensitivity_tests.png"
-                    alt="Methodological workflow"
-                >
+<section class="project-end">
 
-                <p>
-                    Methodological workflow of the study.
-                    
-                    The methodology used to assess the impact of the 2023 earthquakes in Turkey 
-                    on population mobility at both provincial and district levels. By leveraging Meta mobility data,
-                    correlation analyses, spatial Local Moran’s I, and linear regressions, the study evaluates pre- and 
-                    post-disaster movement patterns across varying impact zones. It also highlights behavioral and 
-                    resilience disparities between urban and rural areas relative to peak ground acceleration (PGA),
-                    contextualized through localized literature.
-                </p>
+    <div class="project-content-inner">
 
-            </div>
+        <p class="project-tools-label">
+            TOOLS & DATA
+        </p>
 
+
+        <div class="project-tools">
+
+            <span>
+                Python
+            </span>
+
+            <span>
+                R
+            </span>
+
+            <span>
+                Meta Movement Data
+            </span>
+
+            <span>
+                GADM
+            </span>
+
+            <span>
+                Spatial Analysis
+            </span>
+
+            <span>
+                Statistical Analysis
+            </span>
 
         </div>
 
-    </section>
 
+        <a
+            href="../index.html#projects"
+            class="project-back-button"
+        >
+            ← Back to all projects
+        </a>
 
+    </div>
 
-    <!-- =========================
-         RESULTS
-    ========================== -->
-
-    <section class="project-content project-results">
-
-        <div class="project-content-inner">
-
-            <div class="section-heading">
-
-                <span>
-                    04
-                </span>
-
-                <p>
-                    RESULTS
-                </p>
-
-            </div>
-
-
-            <h2>
-                What the data reveal
-            </h2>
-
-
-
-            <!-- RESULT 01 -->
-
-            <article class="result">
-
-                <div class="result-header">
-
-                    <span>
-                        04.1
-                    </span>
-
-                    <h3>
-                        Temporal patterns
-                    </h3>
-
-                </div>
-
-
-                <div class="result-content">
-
-                    <div></div>
-
-                    <div>
-
-                        <p>
-                            Temporal evolution of population
-                            mobility observed in the data.
-                        </p>
-
-                        <div class="result-figure">
-
-                            <img
-                                src="../Images/TS.png"
-                                alt="Temporal evolution of population mobility"
-                            >
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- RESULT 02 -->
-
-            <article class="result">
-
-                <div class="result-header">
-
-                    <span>
-                        04.2
-                    </span>
-
-                    <h3>
-                        Validation and influencing factors
-                    </h3>
-
-                </div>
-
-
-                <div class="result-content">
-
-                    <div></div>
-
-                    <div>
-
-                        <p>
-                            Assessment of relationships between
-                            differences in Meta Movement Data and
-                            selected geographic and socio-demographic
-                            factors.
-                        </p>
-
-                        <div class="result-figure">
-
-                            <img
-                                src="../Images/sensitivity_test_result.png"
-                                alt="Validation of Meta Movement Data"
-                            >
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- RESULT 03 -->
-
-            <article class="result">
-
-                <div class="result-header">
-
-                    <span>
-                        04.3
-                    </span>
-
-                    <h3>
-                        Earthquake-related mobility
-                    </h3>
-
-                </div>
-
-
-                <div class="result-content">
-
-                    <div></div>
-
-                    <div>
-
-                        <p>
-                            Changes in population mobility before
-                            and after the 6 February 2023 earthquake.
-                        </p>
-
-                        <div class="result-figure">
-
-                            <img
-                                src="../Images/EQ_TS.png"
-                                alt="Population mobility following the 2023 Türkiye earthquake"
-                            >
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         PROJECT FOOTER
-    ========================== -->
-
-    <section class="project-end">
-
-        <div class="project-content-inner">
-
-            <p class="project-tools-label">
-                TOOLS
-            </p>
-
-            <div class="project-tools">
-
-                <span>Python</span>
-                <span>R</span>
-                <span>Meta Movement Data</span>
-                <span>GADM</span>
-                <span>Spatial Analysis</span>
-                <span>Statistical Analysis</span>
-
-            </div>
-
-
-            <a
-                href="../index.html#projects"
-                class="project-back-button"
-            >
-                ← Back to all projects
-            </a>
-
-        </div>
-
-    </section>
-
+</section>
+```
 
 </body>
 
