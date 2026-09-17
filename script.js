@@ -53,6 +53,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
   }
 
+  <script>
+
+    const slides = document.querySelectorAll(".slider-image");
+    const dots = document.querySelectorAll(".slider-dot");
+
+    const previousButton = document.querySelector(".slider-button.prev");
+    const nextButton = document.querySelector(".slider-button.next");
+
+    let currentSlide = 0;
+
+
+    function showSlide(index) {
+
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
+        dots.forEach((dot) => {
+            dot.classList.remove("active");
+        });
+
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+
+        currentSlide = index;
+    }
+
+
+    nextButton.addEventListener("click", () => {
+
+        const nextSlide =
+            (currentSlide + 1) % slides.length;
+
+        showSlide(nextSlide);
+
+    });
+
+
+    previousButton.addEventListener("click", () => {
+
+        const previousSlide =
+            (currentSlide - 1 + slides.length) % slides.length;
+
+        showSlide(previousSlide);
+
+    });
+
+
+    dots.forEach((dot, index) => {
+
+        dot.addEventListener("click", () => {
+
+            showSlide(index);
+
+        });
+
+    });
+
+
 
   /* Bouton X */
 
