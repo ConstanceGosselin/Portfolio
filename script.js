@@ -16,19 +16,31 @@ document.addEventListener(
             document.querySelectorAll(".image-slider");
 
 
+        /*
+        =====================================================
+        INITIALISE EACH SLIDER INDEPENDENTLY
+        =====================================================
+        */
+
         sliders.forEach(
             function (slider) {
 
 
                 /*
                 -------------------------------------------------
-                Find elements belonging to THIS slider
+                Images belonging to THIS slider
                 -------------------------------------------------
                 */
 
                 const images =
                     slider.querySelectorAll(".slider-image");
 
+
+                /*
+                -------------------------------------------------
+                Previous / next buttons
+                -------------------------------------------------
+                */
 
                 const previousButton =
                     slider.querySelector(".prev");
@@ -40,7 +52,7 @@ document.addEventListener(
 
                 /*
                 -------------------------------------------------
-                Find the controls belonging to THIS result
+                Find the result containing THIS slider
                 -------------------------------------------------
                 */
 
@@ -48,9 +60,21 @@ document.addEventListener(
                     slider.closest(".result");
 
 
+                /*
+                -------------------------------------------------
+                Dots belonging to THIS slider
+                -------------------------------------------------
+                */
+
                 const dots =
                     result.querySelectorAll(".slider-dot");
 
+
+                /*
+                -------------------------------------------------
+                Counter belonging to THIS slider
+                -------------------------------------------------
+                */
 
                 const counter =
                     result.querySelector(".slider-counter");
@@ -76,17 +100,42 @@ document.addEventListener(
 
 
                     /*
-                    Keep index within valid range
+                    -------------------------------------------------
+                    Safety check
+                    -------------------------------------------------
                     */
 
-                    if (index >= images.length) {
+                    if (images.length === 0) {
+
+                        return;
+
+                    }
+
+
+                    /*
+                    -------------------------------------------------
+                    Loop to first image
+                    -------------------------------------------------
+                    */
+
+                    if (
+                        index >= images.length
+                    ) {
 
                         index = 0;
 
                     }
 
 
-                    if (index < 0) {
+                    /*
+                    -------------------------------------------------
+                    Loop to last image
+                    -------------------------------------------------
+                    */
+
+                    if (
+                        index < 0
+                    ) {
 
                         index =
                             images.length - 1;
@@ -99,9 +148,9 @@ document.addEventListener(
 
 
                     /*
-                    -------------------------------------------------
-                    Show selected image
-                    -------------------------------------------------
+                    =================================================
+                    UPDATE IMAGES
+                    =================================================
                     */
 
                     images.forEach(
@@ -118,9 +167,9 @@ document.addEventListener(
 
 
                     /*
-                    -------------------------------------------------
-                    Update dots
-                    -------------------------------------------------
+                    =================================================
+                    UPDATE DOTS
+                    =================================================
                     */
 
                     dots.forEach(
@@ -137,9 +186,9 @@ document.addEventListener(
 
 
                     /*
-                    -------------------------------------------------
-                    Update counter
-                    -------------------------------------------------
+                    =================================================
+                    UPDATE COUNTER
+                    =================================================
                     */
 
                     if (counter) {
@@ -166,7 +215,9 @@ document.addEventListener(
 
                     nextButton.addEventListener(
                         "click",
-                        function () {
+                        function (event) {
+
+                            event.preventDefault();
 
                             showImage(
                                 currentIndex + 1
@@ -189,7 +240,9 @@ document.addEventListener(
 
                     previousButton.addEventListener(
                         "click",
-                        function () {
+                        function (event) {
+
+                            event.preventDefault();
 
                             showImage(
                                 currentIndex - 1
@@ -213,7 +266,9 @@ document.addEventListener(
 
                         dot.addEventListener(
                             "click",
-                            function () {
+                            function (event) {
+
+                                event.preventDefault();
 
                                 showImage(index);
 
@@ -247,9 +302,11 @@ document.addEventListener(
         let activeSlider = null;
 
 
+
         /*
         -----------------------------------------------------
-        Detect which slider the mouse is over
+        When the mouse enters a slider,
+        make it the active slider
         -----------------------------------------------------
         */
 
@@ -260,7 +317,8 @@ document.addEventListener(
                     "mouseenter",
                     function () {
 
-                        activeSlider = slider;
+                        activeSlider =
+                            slider;
 
                     }
                 );
@@ -272,7 +330,7 @@ document.addEventListener(
 
         /*
         -----------------------------------------------------
-        Arrow keys
+        Keyboard arrows
         -----------------------------------------------------
         */
 
@@ -282,7 +340,9 @@ document.addEventListener(
 
 
                 /*
+                -------------------------------------------------
                 Ignore keyboard navigation when typing
+                -------------------------------------------------
                 */
 
                 if (
@@ -296,9 +356,12 @@ document.addEventListener(
                 }
 
 
+
                 /*
-                If no slider has been hovered,
+                -------------------------------------------------
+                If no slider has been selected yet,
                 use the first slider
+                -------------------------------------------------
                 */
 
                 if (!activeSlider) {
@@ -308,6 +371,13 @@ document.addEventListener(
 
                 }
 
+
+
+                /*
+                =================================================
+                RIGHT ARROW
+                =================================================
+                */
 
                 if (
                     event.key === "ArrowRight"
@@ -325,6 +395,13 @@ document.addEventListener(
 
                 }
 
+
+
+                /*
+                =================================================
+                LEFT ARROW
+                =================================================
+                */
 
                 if (
                     event.key === "ArrowLeft"
