@@ -1,6 +1,4 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-
 
     /* =====================================================
        IMAGE LIGHTBOX
@@ -18,11 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const clickableImages =
         document.querySelectorAll(".clickable-image");
 
-
-    /* -----------------------------------------------------
-       OUVRIR LE LIGHTBOX
-    ----------------------------------------------------- */
-
     if (lightbox && lightboxImage) {
 
         clickableImages.forEach(function (image) {
@@ -33,40 +26,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 lightboxImage.alt = image.alt;
 
                 lightbox.classList.add("active");
-
-                lightbox.setAttribute(
-                    "aria-hidden",
-                    "false"
-                );
+                lightbox.setAttribute("aria-hidden", "false");
 
                 document.body.style.overflow = "hidden";
-
             });
 
         });
 
 
-        /* -------------------------------------------------
-           FERMER LE LIGHTBOX
-        ------------------------------------------------- */
-
         function closeLightbox() {
 
             lightbox.classList.remove("active");
-
-            lightbox.setAttribute(
-                "aria-hidden",
-                "true"
-            );
+            lightbox.setAttribute("aria-hidden", "true");
 
             lightboxImage.src = "";
 
             document.body.style.overflow = "";
-
         }
 
-
-        /* Bouton X */
 
         if (closeButton) {
 
@@ -84,8 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        /* Cliquer sur le fond */
-
         lightbox.addEventListener(
             "click",
             function (event) {
@@ -99,8 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         );
 
-
-        /* Touche Escape */
 
         document.addEventListener(
             "keydown",
@@ -123,47 +96,78 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       IMAGE SLIDER
+       IMAGE SLIDERS
+       Each slider works independently
     ===================================================== */
 
-    const slides =
-        document.querySelectorAll(".slider-image");
-
-    const dots =
-        document.querySelectorAll(".slider-dot");
-
-    const previousButton =
-        document.querySelector(".slider-button.prev");
-
-    const nextButton =
-        document.querySelector(".slider-button.next");
-
-    const counter =
-        document.querySelector(".slider-counter");
+    const sliders =
+        document.querySelectorAll(".image-slider");
 
 
-    let currentSlide = 0;
+    sliders.forEach(function (slider) {
+
+        /* -------------------------------------------------
+           Elements belonging ONLY to this slider
+        ------------------------------------------------- */
+
+        const slides =
+            slider.querySelectorAll(".slider-image");
+
+        const previousButton =
+            slider.querySelector(".slider-button.prev");
+
+        const nextButton =
+            slider.querySelector(".slider-button.next");
 
 
-    /* -----------------------------------------------------
-       VÉRIFIER SI UN SLIDER EXISTE
-    ----------------------------------------------------- */
+        /*
+         * The dots/counter are expected immediately after
+         * the .image-slider element.
+         */
 
-    if (
-        slides.length > 0 &&
-        dots.length > 0 &&
-        previousButton &&
-        nextButton
-    ) {
+        const dotsContainer =
+            slider.nextElementSibling;
+
+
+        const dots =
+            dotsContainer
+                ? dotsContainer.querySelectorAll(".slider-dot")
+                : [];
+
+
+        const counter =
+            dotsContainer
+                ? dotsContainer.querySelector(".slider-counter")
+                : null;
+
+
+        let currentSlide = 0;
 
 
         /* -------------------------------------------------
-           AFFICHER UNE IMAGE
+           Safety check
+        ------------------------------------------------- */
+
+        if (
+            slides.length === 0 ||
+            !previousButton ||
+            !nextButton
+        ) {
+
+            return;
+
+        }
+
+
+        /* -------------------------------------------------
+           SHOW SLIDE
         ------------------------------------------------- */
 
         function showSlide(index) {
 
-            /* Retour à la dernière image */
+            /*
+             * Loop to last image
+             */
 
             if (index < 0) {
 
@@ -172,7 +176,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /* Retour à la première image */
+            /*
+             * Loop back to first image
+             */
 
             if (index >= slides.length) {
 
@@ -181,7 +187,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /* Retirer active des images */
+            /*
+             * Hide all slides
+             */
 
             slides.forEach(function (slide) {
 
@@ -190,7 +198,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
 
-            /* Retirer active des dots */
+            /*
+             * Reset dots
+             */
 
             dots.forEach(function (dot) {
 
@@ -199,12 +209,16 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
 
-            /* Activer l'image */
+            /*
+             * Show selected slide
+             */
 
             slides[index].classList.add("active");
 
 
-            /* Activer le dot correspondant */
+            /*
+             * Activate corresponding dot
+             */
 
             if (dots[index]) {
 
@@ -213,12 +227,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /* Mettre à jour l'index */
+            /*
+             * Update current position
+             */
 
             currentSlide = index;
 
 
-            /* Mettre à jour le compteur */
+            /*
+             * Update counter if it exists
+             */
 
             if (counter) {
 
@@ -233,13 +251,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
+
         /* -------------------------------------------------
-           IMAGE SUIVANTE
+           NEXT BUTTON
         ------------------------------------------------- */
 
         nextButton.addEventListener(
             "click",
-            function () {
+            function (event) {
+
+                event.preventDefault();
 
                 showSlide(currentSlide + 1);
 
@@ -247,18 +268,22 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
+
         /* -------------------------------------------------
-           IMAGE PRÉCÉDENTE
+           PREVIOUS BUTTON
         ------------------------------------------------- */
 
         previousButton.addEventListener(
             "click",
-            function () {
+            function (event) {
+
+                event.preventDefault();
 
                 showSlide(currentSlide - 1);
 
             }
         );
+
 
 
         /* -------------------------------------------------
@@ -269,7 +294,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             dot.addEventListener(
                 "click",
-                function () {
+                function (event) {
+
+                    event.preventDefault();
 
                     showSlide(index);
 
@@ -279,53 +306,229 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        /* -------------------------------------------------
-           NAVIGATION AU CLAVIER
-        ------------------------------------------------- */
-
-        document.addEventListener(
-            "keydown",
-            function (event) {
-
-                /*
-                 * Si le lightbox est ouvert,
-                 * les flèches ne contrôlent pas le slider.
-                 */
-
-                if (
-                    lightbox &&
-                    lightbox.classList.contains("active")
-                ) {
-
-                    return;
-
-                }
-
-
-                if (event.key === "ArrowRight") {
-
-                    showSlide(currentSlide + 1);
-
-                }
-
-
-                if (event.key === "ArrowLeft") {
-
-                    showSlide(currentSlide - 1);
-
-                }
-
-            }
-        );
-
 
         /* -------------------------------------------------
-           INITIALISATION
+           INITIALIZE SLIDER
         ------------------------------------------------- */
 
         showSlide(0);
 
-    }
+    });
+
+
+
+    /* =====================================================
+       KEYBOARD NAVIGATION
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            /*
+             * Do nothing if lightbox is open
+             */
+
+            if (
+                lightbox &&
+                lightbox.classList.contains("active")
+            ) {
+
+                return;
+
+            }
+
+
+            /*
+             * Find the slider currently under the mouse
+             */
+
+            let activeSlider =
+                document.querySelector(
+                    ".image-slider:hover"
+                );
+
+
+            /*
+             * If no slider is hovered,
+             * use the first slider
+             */
+
+            if (!activeSlider) {
+
+                activeSlider = sliders[0];
+
+            }
+
+
+            /*
+             * No sliders on the page
+             */
+
+            if (!activeSlider) {
+
+                return;
+
+            }
+
+
+            const slides =
+                activeSlider.querySelectorAll(
+                    ".slider-image"
+                );
+
+
+            if (slides.length === 0) {
+
+                return;
+
+            }
+
+
+            /*
+             * Find current active image
+             */
+
+            let currentIndex = 0;
+
+
+            slides.forEach(function (slide, index) {
+
+                if (
+                    slide.classList.contains("active")
+                ) {
+
+                    currentIndex = index;
+
+                }
+
+            });
+
+
+            /*
+             * RIGHT ARROW
+             */
+
+            if (event.key === "ArrowRight") {
+
+                currentIndex++;
+
+                if (
+                    currentIndex >= slides.length
+                ) {
+
+                    currentIndex = 0;
+
+                }
+
+            }
+
+
+            /*
+             * LEFT ARROW
+             */
+
+            else if (event.key === "ArrowLeft") {
+
+                currentIndex--;
+
+                if (currentIndex < 0) {
+
+                    currentIndex =
+                        slides.length - 1;
+
+                }
+
+            }
+
+
+            /*
+             * If another key was pressed,
+             * don't modify the slider
+             */
+
+            else {
+
+                return;
+
+            }
+
+
+            /*
+             * Hide all images
+             */
+
+            slides.forEach(function (slide) {
+
+                slide.classList.remove("active");
+
+            });
+
+
+            /*
+             * Show selected image
+             */
+
+            slides[currentIndex].classList.add(
+                "active"
+            );
+
+
+            /*
+             * Update dots
+             */
+
+            const dotsContainer =
+                activeSlider.nextElementSibling;
+
+
+            if (dotsContainer) {
+
+                const dots =
+                    dotsContainer.querySelectorAll(
+                        ".slider-dot"
+                    );
+
+
+                dots.forEach(function (dot) {
+
+                    dot.classList.remove("active");
+
+                });
+
+
+                if (dots[currentIndex]) {
+
+                    dots[currentIndex].classList.add(
+                        "active"
+                    );
+
+                }
+
+
+                /*
+                 * Update counter
+                 */
+
+                const counter =
+                    dotsContainer.querySelector(
+                        ".slider-counter"
+                    );
+
+
+                if (counter) {
+
+                    counter.textContent =
+                        "Image " +
+                        (currentIndex + 1) +
+                        " / " +
+                        slides.length;
+
+                }
+
+            }
+
+        }
+    );
 
 });
-```
