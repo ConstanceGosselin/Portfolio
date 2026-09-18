@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Climate & Tick Distribution in Europe | Constance Gosselin
+</title>
+
+<link
+    rel="stylesheet"
+    href="../style.css"
+>
+```
+
+</head>
+
+<body>
+
+```
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
+
+<header class="site-header">
+
+    <nav class="navbar">
+
+        <a
+            href="../index.html"
+            class="nav-logo"
+        >
+            Constance Gosselin
+        </a>
+
+        <div class="nav-links">
+
+            <a href="../index.html#projects">
+                Projects
+            </a>
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+            <a href="../index.html#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<main>
+
+    <section class="project-hero">
+
+        <div class="project-hero-content">
+
+            <p class="project-category">
+                Climate Impacts · Spatial Analysis · Environmental Health
+            </p>
+
+            <h1>
+                Climate & Tick Distribution in Europe
+            </h1>
+
+            <p class="project-intro">
+
+                Investigating whether changes in relative humidity
+                can help explain the emergence of tick species
+                in new European regions.
+
+            </p>
+
+            <div class="project-meta">
+
+                <span>
+                    <strong>Location</strong>
+                    Europe
+                </span>
+
+                <span>
+                    <strong>Period</strong>
+                    2003–2023
+                </span>
+
+                <span>
+                    <strong>Methods</strong>
+                    GIS · R · Spatial statistics
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROJECT OVERVIEW
+    ================================================== -->
+
+    <section class="project-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                01
+            </span>
+
+            <h2>
+                Research question
+            </h2>
+
+        </div>
+
+
+        <div class="project-grid">
+
+            <div>
+
+                <p>
+                    Tick species are influenced by environmental
+                    conditions that affect their activity and
+                    survival. As climate conditions change across
+                    Europe, changes in the distribution of
+                    vector species may have implications for
+                    public health.
+                </p>
+
+                <p>
+                    This project investigates whether spatial
+                    and temporal variations in relative humidity
+                    are associated with the appearance of five
+                    tick species in new European regions between
+                    2017 and 2023.
+                </p>
+
+            </div>
+
+
+            <div class="project-highlight">
+
+                <p class="highlight-label">
+                    Research question
+                </p>
+
+                <p class="highlight-text">
+                    Does variation in relative humidity help
+                    explain the emergence of tick species in
+                    new European regions?
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         DATA
+    ================================================== -->
+
+    <section class="project-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                02
+            </span>
+
+            <h2>
+                Data
+            </h2>
+
+        </div>
+
+
+        <div class="project-grid three-columns">
+
+            <div class="data-card">
+
+                <h3>
+                    Climate
+                </h3>
+
+                <p>
+                    AIRS / NASA relative humidity data
+                    downloaded as NetCDF files and processed
+                    in R.
+                </p>
+
+                <span class="data-tag">
+                    NetCDF
+                </span>
+
+                <span class="data-tag">
+                    NASA AIRS
+                </span>
+
+            </div>
+
+
+            <div class="data-card">
+
+                <h3>
+                    Tick distribution
+                </h3>
+
+                <p>
+                    European tick distribution data were used
+                    to identify newly reported presence across
+                    European administrative regions.
+                </p>
+
+                <span class="data-tag">
+                    ECDC
+                </span>
+
+                <span class="data-tag">
+                    Species data
+                </span>
+
+            </div>
+
+
+            <div class="data-card">
+
+                <h3>
+                    Spatial framework
+                </h3>
+
+                <p>
+                    NUTS2 administrative regions were used to
+                    aggregate and compare climate and species
+                    distribution data.
+                </p>
+
+                <span class="data-tag">
+                    GIS
+                </span>
+
+                <span class="data-tag">
+                    NUTS2
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         METHODOLOGY
+    ================================================== -->
+
+    <section class="project-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                03
+            </span>
+
+            <h2>
+                Methodology
+            </h2>
+
+        </div>
+
+
+        <p class="section-intro">
+
+            The workflow combined climate-data processing,
+            spatial aggregation and statistical analysis
+            to compare changes in relative humidity with
+            newly reported tick presence.
+
+        </p>
+
+
+        <div class="workflow">
+
+            <div class="workflow-step">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Climate data
+                </h3>
+
+                <p>
+                    Download and processing of AIRS relative
+                    humidity NetCDF data in R.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-arrow">
+                →
+            </div>
+
+
+            <div class="workflow-step">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Temporal aggregation
+                </h3>
+
+                <p>
+                    Day and night observations were aggregated
+                    to monthly and annual averages.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-arrow">
+                →
+            </div>
+
+
+            <div class="workflow-step">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Spatial aggregation
+                </h3>
+
+                <p>
+                    Raster climate data were integrated with
+                    NUTS2 administrative regions.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-arrow">
+                →
+            </div>
+
+
+            <div class="workflow-step">
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    Climate anomaly
+                </h3>
+
+                <p>
+                    Relative humidity changes were calculated
+                    against a 2003–2016 reference period.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-arrow">
+                →
+            </div>
+
+
+            <div class="workflow-step">
+
+                <span>
+                    05
+                </span>
+
+                <h3>
+                    Tick distribution
+                </h3>
+
+                <p>
+                    Newly reported species presence was
+                    identified for each region.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-arrow">
+                →
+            </div>
+
+
+            <div class="workflow-step">
+
+                <span>
+                    06
+                </span>
+
+                <h3>
+                    Statistical analysis
+                </h3>
+
+                <p>
+                    Logistic regression was used to test the
+                    association between humidity changes and
+                    newly reported presence.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CLIMATE RESULTS
+    ================================================== -->
+
+    <section class="project-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                04
+            </span>
+
+            <h2>
+                Climate patterns
+            </h2>
+
+        </div>
+
+
+        <p class="section-intro">
+
+            Between 2017 and 2023, mean relative humidity
+            exceeded 60% across much of northern Europe,
+            while lower values were observed across southern
+            and central Europe.
+
+        </p>
+
+
+        <div class="project-image">
+
+            <img
+                src="../images/tick-humidity-2017-2023.png"
+                alt="Mean relative humidity in Europe between 2017 and 2023"
+                class="clickable-image"
+            >
+
+            <p class="image-caption">
+                Mean relative humidity across Europe,
+                2017–2023.
+            </p>
+
+        </div>
+
+
+        <div class="project-image">
+
+            <img
+                src="../images/tick-humidity-difference.png"
+                alt="Difference in relative humidity between 2017-2023 and 2003-2016"
+                class="clickable-image"
+            >
+
+            <p class="image-caption">
+                Difference in mean relative humidity between
+                the study period (2017–2023) and the reference
+                period (2003–2016).
+            </p>
+
+        </div>
+
+
+        <p>
+
+            Relative humidity increased in parts of northern
+            Europe, the Alps and Mediterranean coastal areas,
+            while decreases were observed across parts of
+            central Europe, Spain and Portugal.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================================
+         TICK DISTRIBUTION
+    ================================================== -->
+
+    <section class="project-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                05
+            </span>
+
+            <h2>
+                Tick distribution
+            </h2>
+
+        </div>
+
+
+        <p class="section-intro">
+
+            Five species were analysed to identify regions
+            where their presence was newly reported after
+            2017.
+
+        </p>
+
+
+        <div class="species-grid">
+
+            <div>
+                <strong>
+                    Dermacentor reticulatus
+                </strong>
+
+                <span>
+                    34 new regions
+                </span>
+            </div>
+
+
+            <div>
+                <strong>
+                    Hyalomma marginatum
+                </strong>
+
+                <span>
+                    121 new regions
+                </span>
+            </div>
+
+
+            <div>
+                <strong>
+                    Ixodes persulcatus
+                </strong>
+
+                <span>
+                    7 new regions
+                </span>
+            </div>
+
+
+            <div>
+                <strong>
+                    Ixodes ricinus
+                </strong>
+
+                <span>
+                    14 new regions
+                </span>
+            </div>
+
+
+            <div>
+                <strong>
+                    Rhipicephalus sanguineus
+                </strong>
+
+                <span>
+                    21 new regions
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="project-image">
+
+            <img
+                src="../images/tick-distribution-europe.png"
+                alt="Distribution of five tick species across Europe"
+                class="clickable-image"
+            >
+
+            <p class="image-caption">
+                Distribution of the five analysed tick species
+                across European regions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         STATISTICAL ANALYSIS
+    ================================================== -->
+
+    <section class="project-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                06
+            </span>
+
+            <h2>
+                Statistical analysis
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Logistic regression was used to test whether
+            changes in relative humidity were associated
+            with newly reported tick presence.
+
+        </p>
+
+
+        <div class="results-table-wrapper">
+
+            <table class="results-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Species
+                        </th>
+
+                        <th>
+                            β
+                        </th>
+
+                        <th>
+                            Statistical evidence
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <em>Dermacentor reticulatus</em>
+                        </td>
+
+                        <td>
+                            −0.12
+                        </td>
+
+                        <td>
+                            Significant at 0.05
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <em>Rhipicephalus sanguineus</em>
+                        </td>
+
+                        <td>
+                            0.06
+                        </td>
+
+                        <td>
+                            Not significant
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <em>Ixodes persulcatus</em>
+                        </td>
+
+                        <td>
+                            —
+                        </td>
+
+                        <td>
+                            Insufficient observations
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <em>Ixodes ricinus</em>
+                        </td>
+
+                        <td>
+                            0.01
+                        </td>
+
+                        <td>
+                            Not significant
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <em>Hyalomma marginatum</em>
+                        </td>
+
+                        <td>
+                            0.01
+                        </td>
+
+                        <td>
+                            Not significant
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+            <p class="highlight-label">
+                Main finding
+            </p>
+
+            <p class="highlight-text">
+
+                The analysis did not provide consistent
+                statistical evidence of an association between
+                changes in relative humidity and newly reported
+                tick presence.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LIMITATIONS
+    ================================================== -->
+
+    <section class="project-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                07
+            </span>
+
+            <h2>
+                Limitations
+            </h2>
+
+        </div>
+
+
+        <div class="limitations-grid">
+
+            <div>
+
+                <h3>
+                    Data quality
+                </h3>
+
+                <p>
+                    Tick observations were qualitative and did
+                    not provide information on abundance or
+                    detection effort.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Temporal uncertainty
+                </h3>
+
+                <p>
+                    The exact date of species arrival in many
+                    regions was unknown, limiting the reliability
+                    of the reference-period comparison.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Spatial scale
+                </h3>
+
+                <p>
+                    Aggregating observations to administrative
+                    regions introduces potential MAUP effects
+                    and may hide finer-scale ecological patterns.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Multiple drivers
+                </h3>
+
+                <p>
+                    Tick distribution is influenced by several
+                    interacting factors, including temperature,
+                    vegetation, soil moisture and host mobility.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         NEXT STEPS
+    ================================================== -->
+
+    <section class="project-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                08
+            </span>
+
+            <h2>
+                Next steps
+            </h2>
+
+        </div>
+
+
+        <p class="section-intro">
+
+            A stronger analysis would move beyond relative
+            humidity alone and incorporate environmental and
+            ecological drivers at a finer spatial resolution.
+
+        </p>
+
+
+        <ul class="next-steps">
+
+            <li>
+                Use saturation deficit as a more biologically
+                relevant humidity indicator.
+            </li>
+
+            <li>
+                Integrate temperature and winter conditions.
+            </li>
+
+            <li>
+                Incorporate vegetation and land-cover variables.
+            </li>
+
+            <li>
+                Use georeferenced tick observations rather than
+                administrative presence/absence data where possible.
+            </li>
+
+            <li>
+                Model multiple environmental drivers jointly.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SKILLS
+    ================================================== -->
+
+    <section class="project-section">
+
+        <div class="section-heading">
+
+            <span class="section-number">
+                09
+            </span>
+
+            <h2>
+                Tools & skills
+            </h2>
+
+        </div>
+
+
+        <div class="skills-list">
+
+            <span>
+                R
+            </span>
+
+            <span>
+                NetCDF
+            </span>
+
+            <span>
+                Raster analysis
+            </span>
+
+            <span>
+                GIS
+            </span>
+
+            <span>
+                Spatial statistics
+            </span>
+
+            <span>
+                Logistic regression
+            </span>
+
+            <span>
+                Climate data
+            </span>
+
+            <span>
+                Environmental health
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FOOTER / GITHUB
+    ================================================== -->
+
+    <section class="project-footer">
+
+        <p>
+            Interested in the analysis?
+        </p>
+
+        <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-button"
+        >
+            View project on GitHub
+        </a>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     LIGHTBOX
+====================================================== -->
+
+<div
+    id="image-lightbox"
+    class="lightbox"
+>
+
+    <button
+        class="lightbox-close"
+        aria-label="Close image"
+    >
+        ×
+    </button>
+
+    <img
+        id="lightbox-image"
+        src=""
+        alt=""
+    >
+
+</div>
+
+
+
+<script src="../script.js"></script>
+```
+
+</body>
+
+</html>
