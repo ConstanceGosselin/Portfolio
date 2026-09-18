@@ -1,325 +1,353 @@
 ```html
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
-
-
-    /*
-    =====================================================
-    IMAGE SLIDERS
-    =====================================================
-    */
-
-    const sliders = document.querySelectorAll(".image-slider");
-
-
-    sliders.forEach(function (slider) {
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
 
         /*
-        -------------------------------------------------
-        Elements belonging to THIS slider
-        -------------------------------------------------
+        =====================================================
+        IMAGE SLIDERS
+        =====================================================
         */
 
-        const images =
-            slider.querySelectorAll(".slider-image");
-
-        const previousButton =
-            slider.querySelector(".prev");
-
-        const nextButton =
-            slider.querySelector(".next");
+        const sliders =
+            document.querySelectorAll(".image-slider");
 
 
-        /*
-        -------------------------------------------------
-        Find the container containing the controls
-        -------------------------------------------------
-        */
-
-        const container =
-            slider.parentElement;
+        sliders.forEach(
+            function (slider) {
 
 
-        const dots =
-            container.querySelectorAll(".slider-dot");
+                /*
+                -------------------------------------------------
+                Find elements belonging to THIS slider
+                -------------------------------------------------
+                */
+
+                const images =
+                    slider.querySelectorAll(".slider-image");
 
 
-        const counter =
-            container.querySelector(".slider-counter");
+                const previousButton =
+                    slider.querySelector(".prev");
 
 
-        /*
-        -------------------------------------------------
-        Current image
-        -------------------------------------------------
-        */
-
-        let currentIndex = 0;
+                const nextButton =
+                    slider.querySelector(".next");
 
 
+                /*
+                -------------------------------------------------
+                Find the controls belonging to THIS result
+                -------------------------------------------------
+                */
 
-        /*
-        =================================================
-        SHOW IMAGE
-        =================================================
-        */
-
-        function showImage(index) {
-
-
-            if (images.length === 0) {
-                return;
-            }
+                const result =
+                    slider.closest(".result");
 
 
-            /*
-            Keep index inside the valid range
-            */
-
-            if (index >= images.length) {
-                index = 0;
-            }
-
-            if (index < 0) {
-                index = images.length - 1;
-            }
+                const dots =
+                    result.querySelectorAll(".slider-dot");
 
 
-            currentIndex = index;
+                const counter =
+                    result.querySelector(".slider-counter");
 
 
-            /*
-            -------------------------------------------------
-            Show selected image
-            -------------------------------------------------
-            */
+                /*
+                -------------------------------------------------
+                Current image
+                -------------------------------------------------
+                */
 
-            images.forEach(function (image, i) {
-
-                image.classList.toggle(
-                    "active",
-                    i === currentIndex
-                );
-
-            });
-
-
-            /*
-            -------------------------------------------------
-            Update dots
-            -------------------------------------------------
-            */
-
-            dots.forEach(function (dot, i) {
-
-                dot.classList.toggle(
-                    "active",
-                    i === currentIndex
-                );
-
-            });
-
-
-            /*
-            -------------------------------------------------
-            Update counter
-            -------------------------------------------------
-            */
-
-            if (counter) {
-
-                counter.textContent =
-                    "Image " +
-                    (currentIndex + 1) +
-                    " / " +
-                    images.length;
-
-            }
-
-        }
+                let currentIndex = 0;
 
 
 
-        /*
-        =================================================
-        NEXT
-        =================================================
-        */
+                /*
+                =================================================
+                SHOW IMAGE
+                =================================================
+                */
 
-        if (nextButton) {
+                function showImage(index) {
 
-            nextButton.addEventListener(
-                "click",
-                function (event) {
 
-                    event.preventDefault();
+                    /*
+                    Keep index within valid range
+                    */
 
-                    showImage(currentIndex + 1);
+                    if (index >= images.length) {
+
+                        index = 0;
+
+                    }
+
+
+                    if (index < 0) {
+
+                        index =
+                            images.length - 1;
+
+                    }
+
+
+                    currentIndex = index;
+
+
+
+                    /*
+                    -------------------------------------------------
+                    Show selected image
+                    -------------------------------------------------
+                    */
+
+                    images.forEach(
+                        function (image, i) {
+
+                            image.classList.toggle(
+                                "active",
+                                i === currentIndex
+                            );
+
+                        }
+                    );
+
+
+
+                    /*
+                    -------------------------------------------------
+                    Update dots
+                    -------------------------------------------------
+                    */
+
+                    dots.forEach(
+                        function (dot, i) {
+
+                            dot.classList.toggle(
+                                "active",
+                                i === currentIndex
+                            );
+
+                        }
+                    );
+
+
+
+                    /*
+                    -------------------------------------------------
+                    Update counter
+                    -------------------------------------------------
+                    */
+
+                    if (counter) {
+
+                        counter.textContent =
+                            "Image " +
+                            (currentIndex + 1) +
+                            " / " +
+                            images.length;
+
+                    }
 
                 }
-            );
-
-        }
 
 
 
-        /*
-        =================================================
-        PREVIOUS
-        =================================================
-        */
+                /*
+                =================================================
+                NEXT IMAGE
+                =================================================
+                */
 
-        if (previousButton) {
+                if (nextButton) {
 
-            previousButton.addEventListener(
-                "click",
-                function (event) {
+                    nextButton.addEventListener(
+                        "click",
+                        function () {
 
-                    event.preventDefault();
+                            showImage(
+                                currentIndex + 1
+                            );
 
-                    showImage(currentIndex - 1);
-
-                }
-            );
-
-        }
-
-
-
-        /*
-        =================================================
-        DOT NAVIGATION
-        =================================================
-        */
-
-        dots.forEach(function (dot, index) {
-
-            dot.addEventListener(
-                "click",
-                function (event) {
-
-                    event.preventDefault();
-
-                    showImage(index);
+                        }
+                    );
 
                 }
-            );
-
-        });
 
 
 
-        /*
-        =================================================
-        INITIAL STATE
-        =================================================
-        */
+                /*
+                =================================================
+                PREVIOUS IMAGE
+                =================================================
+                */
 
-        showImage(0);
+                if (previousButton) {
 
-    });
+                    previousButton.addEventListener(
+                        "click",
+                        function () {
 
+                            showImage(
+                                currentIndex - 1
+                            );
 
+                        }
+                    );
 
-    /*
-    =====================================================
-    KEYBOARD NAVIGATION
-    =====================================================
-    */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-
-            /*
-            Ignore typing fields
-            */
-
-            if (
-                event.target.tagName === "INPUT" ||
-                event.target.tagName === "TEXTAREA" ||
-                event.target.tagName === "SELECT"
-            ) {
-
-                return;
-
-            }
+                }
 
 
-            /*
-            -------------------------------------------------
-            Right arrow
-            -------------------------------------------------
-            */
 
-            if (event.key === "ArrowRight") {
+                /*
+                =================================================
+                DOT NAVIGATION
+                =================================================
+                */
 
-                const visibleSlider =
-                    Array.from(
-                        document.querySelectorAll(".image-slider")
-                    ).find(function (slider) {
+                dots.forEach(
+                    function (dot, index) {
 
-                        return (
-                            slider.offsetParent !== null
+                        dot.addEventListener(
+                            "click",
+                            function () {
+
+                                showImage(index);
+
+                            }
                         );
 
-                    });
+                    }
+                );
 
 
-                if (visibleSlider) {
+
+                /*
+                =================================================
+                INITIAL STATE
+                =================================================
+                */
+
+                showImage(0);
+
+            }
+        );
+
+
+
+        /*
+        =====================================================
+        KEYBOARD NAVIGATION
+        =====================================================
+        */
+
+        let activeSlider = null;
+
+
+        /*
+        -----------------------------------------------------
+        Detect which slider the mouse is over
+        -----------------------------------------------------
+        */
+
+        sliders.forEach(
+            function (slider) {
+
+                slider.addEventListener(
+                    "mouseenter",
+                    function () {
+
+                        activeSlider = slider;
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        /*
+        -----------------------------------------------------
+        Arrow keys
+        -----------------------------------------------------
+        */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+
+                /*
+                Ignore keyboard navigation when typing
+                */
+
+                if (
+                    event.target.tagName === "INPUT" ||
+                    event.target.tagName === "TEXTAREA" ||
+                    event.target.tagName === "SELECT"
+                ) {
+
+                    return;
+
+                }
+
+
+                /*
+                If no slider has been hovered,
+                use the first slider
+                */
+
+                if (!activeSlider) {
+
+                    activeSlider =
+                        sliders[0];
+
+                }
+
+
+                if (
+                    event.key === "ArrowRight"
+                ) {
 
                     const button =
-                        visibleSlider.querySelector(".next");
+                        activeSlider.querySelector(".next");
+
 
                     if (button) {
+
                         button.click();
+
+                    }
+
+                }
+
+
+                if (
+                    event.key === "ArrowLeft"
+                ) {
+
+                    const button =
+                        activeSlider.querySelector(".prev");
+
+
+                    if (button) {
+
+                        button.click();
+
                     }
 
                 }
 
             }
+        );
 
 
-            /*
-            -------------------------------------------------
-            Left arrow
-            -------------------------------------------------
-            */
-
-            if (event.key === "ArrowLeft") {
-
-                const visibleSlider =
-                    Array.from(
-                        document.querySelectorAll(".image-slider")
-                    ).find(function (slider) {
-
-                        return (
-                            slider.offsetParent !== null
-                        );
-
-                    });
-
-
-                if (visibleSlider) {
-
-                    const button =
-                        visibleSlider.querySelector(".prev");
-
-                    if (button) {
-                        button.click();
-                    }
-
-                }
-
-            }
-
-        }
-    );
-
-});
+    }
+);
 
 </script>
 ```
