@@ -1,309 +1,325 @@
+```html
 <script>
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /*
+    =====================================================
+    IMAGE SLIDERS
+    =====================================================
+    */
+
+    const sliders = document.querySelectorAll(".image-slider");
+
+
+    sliders.forEach(function (slider) {
 
 
         /*
-        =====================================================
-        IMAGE SLIDERS
-        =====================================================
+        -------------------------------------------------
+        Elements belonging to THIS slider
+        -------------------------------------------------
         */
 
-        const sliders =
-            document.querySelectorAll(".image-slider");
+        const images =
+            slider.querySelectorAll(".slider-image");
 
+        const previousButton =
+            slider.querySelector(".prev");
 
-        sliders.forEach(
-            function (slider) {
+        const nextButton =
+            slider.querySelector(".next");
 
 
-                const images =
-                    slider.querySelectorAll(".slider-image");
+        /*
+        -------------------------------------------------
+        Find the container containing the controls
+        -------------------------------------------------
+        */
 
+        const container =
+            slider.parentElement;
 
-                /*
-                -------------------------------------------------
-                Find the controls belonging to THIS slider
-                -------------------------------------------------
-                */
 
-                const resultContent =
-                    slider.closest(".result-content");
+        const dots =
+            container.querySelectorAll(".slider-dot");
 
 
-                const dots =
-                    resultContent.querySelectorAll(".slider-dot");
+        const counter =
+            container.querySelector(".slider-counter");
 
 
-                const previousButton =
-                    slider.querySelector(".prev");
+        /*
+        -------------------------------------------------
+        Current image
+        -------------------------------------------------
+        */
 
+        let currentIndex = 0;
 
-                const nextButton =
-                    slider.querySelector(".next");
 
 
-                const counter =
-                    resultContent.querySelector(".slider-counter");
+        /*
+        =================================================
+        SHOW IMAGE
+        =================================================
+        */
 
+        function showImage(index) {
 
-                let currentIndex = 0;
 
+            if (images.length === 0) {
+                return;
+            }
 
 
-                /*
-                =================================================
-                SHOW IMAGE
-                =================================================
-                */
+            /*
+            Keep index inside the valid range
+            */
 
-                function showImage(index) {
+            if (index >= images.length) {
+                index = 0;
+            }
 
+            if (index < 0) {
+                index = images.length - 1;
+            }
 
-                    currentIndex = index;
 
+            currentIndex = index;
 
-                    /*
-                    Show the selected image
-                    */
 
-                    images.forEach(
-                        function (image, i) {
+            /*
+            -------------------------------------------------
+            Show selected image
+            -------------------------------------------------
+            */
 
-                            image.classList.toggle(
-                                "active",
-                                i === currentIndex
-                            );
+            images.forEach(function (image, i) {
 
-                        }
-                    );
-
-
-                    /*
-                    Update dots
-                    */
-
-                    dots.forEach(
-                        function (dot, i) {
-
-                            dot.classList.toggle(
-                                "active",
-                                i === currentIndex
-                            );
-
-                        }
-                    );
-
-
-                    /*
-                    Update counter
-                    */
-
-                    if (counter) {
-
-                        counter.textContent =
-                            "Image " +
-                            (currentIndex + 1) +
-                            " / " +
-                            images.length;
-
-                    }
-
-                }
-
-
-
-                /*
-                =================================================
-                NEXT IMAGE
-                =================================================
-                */
-
-                if (nextButton) {
-
-                    nextButton.addEventListener(
-                        "click",
-                        function () {
-
-                            currentIndex++;
-
-                            if (
-                                currentIndex >= images.length
-                            ) {
-
-                                currentIndex = 0;
-
-                            }
-
-                            showImage(currentIndex);
-
-                        }
-                    );
-
-                }
-
-
-
-                /*
-                =================================================
-                PREVIOUS IMAGE
-                =================================================
-                */
-
-                if (previousButton) {
-
-                    previousButton.addEventListener(
-                        "click",
-                        function () {
-
-                            currentIndex--;
-
-                            if (
-                                currentIndex < 0
-                            ) {
-
-                                currentIndex =
-                                    images.length - 1;
-
-                            }
-
-                            showImage(currentIndex);
-
-                        }
-                    );
-
-                }
-
-
-
-                /*
-                =================================================
-                DOT NAVIGATION
-                =================================================
-                */
-
-                dots.forEach(
-                    function (dot, index) {
-
-                        dot.addEventListener(
-                            "click",
-                            function () {
-
-                                showImage(index);
-
-                            }
-                        );
-
-                    }
+                image.classList.toggle(
+                    "active",
+                    i === currentIndex
                 );
 
+            });
 
 
-                /*
-                =================================================
-                INITIAL STATE
-                =================================================
-                */
+            /*
+            -------------------------------------------------
+            Update dots
+            -------------------------------------------------
+            */
 
-                showImage(0);
+            dots.forEach(function (dot, i) {
 
+                dot.classList.toggle(
+                    "active",
+                    i === currentIndex
+                );
+
+            });
+
+
+            /*
+            -------------------------------------------------
+            Update counter
+            -------------------------------------------------
+            */
+
+            if (counter) {
+
+                counter.textContent =
+                    "Image " +
+                    (currentIndex + 1) +
+                    " / " +
+                    images.length;
 
             }
-        );
+
+        }
 
 
 
         /*
-        =====================================================
-        KEYBOARD NAVIGATION
-        =====================================================
+        =================================================
+        NEXT
+        =================================================
         */
 
-        document.addEventListener(
-            "keydown",
-            function (event) {
+        if (nextButton) {
 
+            nextButton.addEventListener(
+                "click",
+                function (event) {
 
-                /*
-                Only change slider with keyboard if
-                the user is not typing in an input
-                */
+                    event.preventDefault();
 
-                if (
-                    event.target.tagName === "INPUT" ||
-                    event.target.tagName === "TEXTAREA"
-                ) {
-
-                    return;
+                    showImage(currentIndex + 1);
 
                 }
+            );
+
+        }
 
 
-                const sliders =
-                    document.querySelectorAll(".image-slider");
 
+        /*
+        =================================================
+        PREVIOUS
+        =================================================
+        */
 
-                /*
-                For keyboard navigation, use the slider
-                currently closest to the mouse position
-                is not reliable, so simply control the
-                first visible slider.
-                */
+        if (previousButton) {
 
-                if (event.key === "ArrowRight") {
+            previousButton.addEventListener(
+                "click",
+                function (event) {
 
-                    sliders.forEach(
-                        function (slider, index) {
+                    event.preventDefault();
 
-                            if (
-                                index === 0
-                            ) {
-
-                                const button =
-                                    slider.querySelector(".next");
-
-                                if (button) {
-                                    button.click();
-                                }
-
-                            }
-
-                        }
-                    );
+                    showImage(currentIndex - 1);
 
                 }
+            );
+
+        }
 
 
-                if (event.key === "ArrowLeft") {
 
-                    sliders.forEach(
-                        function (slider, index) {
+        /*
+        =================================================
+        DOT NAVIGATION
+        =================================================
+        */
 
-                            if (
-                                index === 0
-                            ) {
+        dots.forEach(function (dot, index) {
 
-                                const button =
-                                    slider.querySelector(".prev");
+            dot.addEventListener(
+                "click",
+                function (event) {
 
-                                if (button) {
-                                    button.click();
-                                }
+                    event.preventDefault();
 
-                            }
+                    showImage(index);
 
-                        }
-                    );
+                }
+            );
+
+        });
+
+
+
+        /*
+        =================================================
+        INITIAL STATE
+        =================================================
+        */
+
+        showImage(0);
+
+    });
+
+
+
+    /*
+    =====================================================
+    KEYBOARD NAVIGATION
+    =====================================================
+    */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+
+            /*
+            Ignore typing fields
+            */
+
+            if (
+                event.target.tagName === "INPUT" ||
+                event.target.tagName === "TEXTAREA" ||
+                event.target.tagName === "SELECT"
+            ) {
+
+                return;
+
+            }
+
+
+            /*
+            -------------------------------------------------
+            Right arrow
+            -------------------------------------------------
+            */
+
+            if (event.key === "ArrowRight") {
+
+                const visibleSlider =
+                    Array.from(
+                        document.querySelectorAll(".image-slider")
+                    ).find(function (slider) {
+
+                        return (
+                            slider.offsetParent !== null
+                        );
+
+                    });
+
+
+                if (visibleSlider) {
+
+                    const button =
+                        visibleSlider.querySelector(".next");
+
+                    if (button) {
+                        button.click();
+                    }
 
                 }
 
             }
-        );
 
 
-    }
-);
+            /*
+            -------------------------------------------------
+            Left arrow
+            -------------------------------------------------
+            */
+
+            if (event.key === "ArrowLeft") {
+
+                const visibleSlider =
+                    Array.from(
+                        document.querySelectorAll(".image-slider")
+                    ).find(function (slider) {
+
+                        return (
+                            slider.offsetParent !== null
+                        );
+
+                    });
+
+
+                if (visibleSlider) {
+
+                    const button =
+                        visibleSlider.querySelector(".prev");
+
+                    if (button) {
+                        button.click();
+                    }
+
+                }
+
+            }
+
+        }
+    );
+
+});
 
 </script>
+```
