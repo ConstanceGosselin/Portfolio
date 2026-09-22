@@ -1,39 +1,11 @@
 
-
 document.addEventListener("DOMContentLoaded", function () {
-
-    /*
-    ============================================================
-    ALL SLIDERS
-    ============================================================
-    */
 
     const sliders = document.querySelectorAll(".image-slider");
 
-
-    /*
-    ============================================================
-    INITIALISE EACH SLIDER
-    ============================================================
-    */
-
     sliders.forEach(function (slider) {
 
-        /*
-        --------------------------------------------------------
-        IMAGES
-        --------------------------------------------------------
-        */
-
-        const images =
-            slider.querySelectorAll(".slider-image");
-
-
-        /*
-        --------------------------------------------------------
-        BUTTONS
-        --------------------------------------------------------
-        */
+        const images = slider.querySelectorAll(".slider-image");
 
         const previousButton =
             slider.querySelector(".slider-button.prev");
@@ -41,87 +13,34 @@ document.addEventListener("DOMContentLoaded", function () {
         const nextButton =
             slider.querySelector(".slider-button.next");
 
-
-        /*
-        --------------------------------------------------------
-        FIND DOTS AND COUNTER
-        --------------------------------------------------------
-
-        They are OUTSIDE .image-slider in your HTML.
-        They are immediately after the slider.
-        --------------------------------------------------------
-        */
-
-        const parent =
+        const sliderContainer =
             slider.parentElement;
 
-
         const dots =
-            parent.querySelectorAll(".slider-dot");
-
+            sliderContainer.querySelectorAll(".slider-dot");
 
         const counter =
-            parent.querySelector(".slider-counter");
-
-
-        /*
-        --------------------------------------------------------
-        SAFETY CHECK
-        --------------------------------------------------------
-        */
+            sliderContainer.querySelector(".slider-counter");
 
         if (images.length === 0) {
             return;
         }
 
-
-        /*
-        --------------------------------------------------------
-        CURRENT IMAGE
-        --------------------------------------------------------
-        */
-
         let currentIndex = 0;
 
 
-        /*
-        ========================================================
-        SHOW IMAGE
-        ========================================================
-        */
-
         function showImage(index) {
-
-            /*
-            ----------------------------------------------------
-            LOOP FORWARD
-            ----------------------------------------------------
-            */
 
             if (index >= images.length) {
                 index = 0;
             }
 
-
-            /*
-            ----------------------------------------------------
-            LOOP BACKWARD
-            ----------------------------------------------------
-            */
-
             if (index < 0) {
                 index = images.length - 1;
             }
 
-
             currentIndex = index;
 
-
-            /*
-            ----------------------------------------------------
-            UPDATE IMAGES
-            ----------------------------------------------------
-            */
 
             images.forEach(function (image, i) {
 
@@ -133,23 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
 
-            /*
-            ----------------------------------------------------
-            UPDATE DOTS
-            ----------------------------------------------------
-            */
-
             dots.forEach(function (dot, i) {
 
                 dot.classList.toggle(
                     "active",
                     i === currentIndex
                 );
-
-
-                /*
-                Accessibility
-                */
 
                 if (i === currentIndex) {
 
@@ -169,12 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
 
-            /*
-            ----------------------------------------------------
-            UPDATE COUNTER
-            ----------------------------------------------------
-            */
-
             if (counter) {
 
                 counter.textContent =
@@ -188,47 +90,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        /*
-        ========================================================
-        NEXT BUTTON
-        ========================================================
-        */
-
         if (nextButton) {
 
             nextButton.addEventListener(
                 "click",
-                function (event) {
+                function () {
 
-                    event.preventDefault();
-
-                    showImage(
-                        currentIndex + 1
-                    );
+                    showImage(currentIndex + 1);
 
                 }
             );
 
         }
 
-
-        /*
-        ========================================================
-        PREVIOUS BUTTON
-        ========================================================
-        */
 
         if (previousButton) {
 
             previousButton.addEventListener(
                 "click",
-                function (event) {
+                function () {
 
-                    event.preventDefault();
-
-                    showImage(
-                        currentIndex - 1
-                    );
+                    showImage(currentIndex - 1);
 
                 }
             );
@@ -236,19 +118,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        /*
-        ========================================================
-        DOT BUTTONS
-        ========================================================
-        */
-
         dots.forEach(function (dot, index) {
 
             dot.addEventListener(
                 "click",
-                function (event) {
-
-                    event.preventDefault();
+                function () {
 
                     showImage(index);
 
@@ -257,12 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
-
-        /*
-        ========================================================
-        INITIALISE
-        ========================================================
-        */
 
         showImage(0);
 
@@ -281,12 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
             : null;
 
 
-    /*
-    ------------------------------------------------------------
-    Select slider with mouse
-    ------------------------------------------------------------
-    */
-
     sliders.forEach(function (slider) {
 
         slider.addEventListener(
@@ -301,49 +163,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /*
-    ============================================================
-    ARROW KEYS
-    ============================================================
-    */
-
     document.addEventListener(
         "keydown",
         function (event) {
-
-            /*
-            ----------------------------------------------------
-            Ignore typing
-            ----------------------------------------------------
-            */
 
             if (
                 event.target.tagName === "INPUT" ||
                 event.target.tagName === "TEXTAREA" ||
                 event.target.tagName === "SELECT"
             ) {
-
                 return;
-
             }
 
-
-            /*
-            ----------------------------------------------------
-            No slider
-            ----------------------------------------------------
-            */
 
             if (!activeSlider) {
                 return;
             }
 
-
-            /*
-            ----------------------------------------------------
-            RIGHT
-            ----------------------------------------------------
-            */
 
             if (event.key === "ArrowRight") {
 
@@ -353,19 +189,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     );
 
                 if (nextButton) {
-
                     nextButton.click();
-
                 }
 
             }
 
-
-            /*
-            ----------------------------------------------------
-            LEFT
-            ----------------------------------------------------
-            */
 
             if (event.key === "ArrowLeft") {
 
@@ -375,9 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     );
 
                 if (previousButton) {
-
                     previousButton.click();
-
                 }
 
             }
@@ -386,5 +212,3 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 });
-
-
